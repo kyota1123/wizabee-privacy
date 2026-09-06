@@ -50,7 +50,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
   </header>
   <p class="meta"><a href="../">日本語</a></p>
   <p class="lead">Wizabee ("the App") is an iOS application developed and provided by Kyosuke Tachibana ("we", "us"). This policy explains how information is handled in the App.</p>
-  <p class="meta">Last updated: September 1, 2026</p>
+  <p class="meta">Last updated: September 6, 2026</p>
   <div class="note">How your information is handled depends on where you live. <strong>If you live outside Japan, we do not collect any personal data from you, as described in Section 13.</strong> Sections 2 through 8 apply to users in Japan.</div>
 
   <section><h2><span class="no">1</span>What we never collect</h2>
@@ -64,14 +64,15 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>The only device permission the App requests is access to motion sensors, which it uses to detect your walking cadence. Sensor readings are processed on your device and are used solely to match the music tempo to your steps.</p></section>
 
   <section><h2><span class="no">2</span>Information we collect</h2>
-    <p>Only if you live in Japan and give explicit consent, the App sends the following information to our server. Consent is off by default, and the App works exactly the same whether or not you turn it on.</p>
+    <p>Only if you live in Japan and turn on collaborator mode as described in Section 14, the App sends the following information to our server. Collaborator mode is off by default, and the App works exactly the same whether or not you turn it on.</p>
     <p>This section does not apply to users outside Japan. In those regions no consent prompt is shown and no data is sent. See Section 13.</p>
     <ul>
       <li>(1) Walking measurements — cadence, step count, duration, and how closely the music stayed in sync</li>
       <li>(2) Device and app information — device model, app version, iOS version</li>
       <li>(3) An anonymous ID — an identifier generated automatically by the App. It is not linked to your name or contact details, and we cannot identify you from it.</li>
       <li>(4) Ratings and comments — only if you choose to submit them. Please do not enter information that could identify you.</li>
-      <li>(5) Technical measurements — playback rate, timing offsets, and configuration values recorded to understand how the App behaved</li></ul>
+      <li>(5) Technical measurements — playback rate, timing offsets, and configuration values recorded to understand how the App behaved</li>
+      <li>(6) Collaborator mode records — only if you have turned on collaborator mode as described in Section 14</li></ul>
     <p>When such data is sent, our server's access log records the originating IP address. This is unavoidable in network communication and is used only to detect unauthorised access and to investigate faults.</p></section>
 
   <section><h2><span class="no">3</span>Purpose</h2>
@@ -87,7 +88,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>This section applies wherever you live. Please refer to Apple's privacy policy for how Apple Inc. handles your information.</p></section>
 
   <section><h2><span class="no">6</span>Turning off data upload</h2>
-    <p>You can stop the upload at any time from "Privacy &amp; Data" in the Settings tab. Once stopped, no further information leaves your device.</p>
+    <p>You can stop the upload at any time by turning off collaborator mode (Section 14) under "Contribute" in the Settings tab. Once it is off, all sending described in Section 2 and Section 14 stops, and no further information leaves your device.</p>
     <p>Stopping the upload does not delete information that was sent previously. To request deletion, please use the procedure in Section 7.</p></section>
 
   <section><h2><span class="no">7</span>Access and deletion requests</h2>
@@ -146,6 +147,38 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
 
     <h3>13-7 Future changes</h3>
     <p>If we ever change the App so that we do collect personal data outside Japan, we will revise this policy and put the necessary measures in place — including appointing a representative in the Union where required — before making that change.</p></section>
+
+  <section id="section-14"><h2><span class="no">14</span>Collaborator mode</h2>
+
+    <h3>14-1 What collaborator mode is</h3>
+    <p>The App includes a way for users to share records from actual use, to help us improve step detection and the accuracy with which music is matched to your steps. We call this collaborator mode.</p>
+    <p>You can turn on collaborator mode in the Settings tab. It is on only after you agree to the terms of this section. It is off by default. Turning on collaborator mode also turns on the sending of the information described in Section 2.</p>
+
+    <h3>14-2 What is sent in collaborator mode</h3>
+    <p>While collaborator mode is on, if the music feels wrong and you use your earphones to place a mark, the following information is sent to our server:</p>
+    <ul>
+      <li>Motion sensor readings (accelerometer and gyroscope) for a short period before and after the mark</li>
+      <li>The App's internal operating values for the same period, such as playback rate and timing offsets</li>
+      <li>For comparison, one or two unmarked periods from the same session</li>
+      <li>Any note you enter about the mark (optional)</li>
+      <li>Your estimate of how long it took you to place the mark after noticing the problem (chosen from a list)</li></ul>
+    <p>The comparison periods are sent because we need a baseline to judge whether the moment you marked was different from normal.</p>
+
+    <h3>14-3 What is not sent</h3>
+    <ul>
+      <li>From a session in which no mark was placed, no motion sensor readings are sent (only the measurements described in Section 2 are sent)</li>
+      <li>Audio itself is never recorded or sent</li>
+      <li>As stated in Section 1, location data, contacts, photos, and similar data are never collected</li></ul>
+
+    <h3>14-4 Turning off collaborator mode</h3>
+    <p>You can turn off collaborator mode at any time in the Settings tab. Once it is off, nothing further is sent.</p>
+    <p>Turning it off does not delete information that was sent previously. To request deletion, please use the procedure in Section 7.</p>
+
+    <h3>14-5 Where information is stored and for how long</h3>
+    <p>As in Section 4, this information is stored on servers located in Japan, retained for one year in principle, and deleted after that period.</p>
+
+    <h3>14-6 Users outside Japan</h3>
+    <p>As described in Section 13, collaborator mode is not available to users outside Japan. The collaborator mode item is not shown, and no data is sent.</p></section>
 
   <p class="foot"><a href="../support/en/">Support</a>　／　<a href="../">日本語</a>　／　© 2026 Wizabee</p>
 </div>
