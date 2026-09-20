@@ -161,8 +161,28 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>The App's internal operating values for the same period, such as playback rate and timing offsets</li>
       <li>For comparison, one or two periods with no signal from the same session</li>
       <li>Any note you enter about the signal (optional)</li>
-      <li>Your estimate of how long it took you to send the signal after noticing the problem (chosen from a list)</li></ul>
+      <li>Your estimate of how long it took you to send the signal after noticing the problem (chosen from a list)</li>
+      <li>The kind of signal (tempo, sound, or other; you may also leave this unselected)</li>
+      <li>Which song was playing when you sent the signal (for a song included in the App, its identifier; for a song you added yourself, a fixed value meaning &quot;a song you added&quot;. The titles of songs you add are never included)</li>
+      <li>The anonymous ID described in Section 2(3), and the version number of the terms you agreed to</li></ul>
     <p>The comparison periods are sent because we need a baseline to judge whether the moment you signaled was different from normal.</p>
+
+    <h3>14-2-2 What is sent when you walk to a song you added</h3>
+    <p>Only while collaborator mode is on and you have agreed to the terms covering songs you add, the following is sent for each song you played, for walks in which you played songs you added yourself. If you have not agreed to those terms, nothing from that walk is sent at all, including the measurements described in Section 2.</p>
+    <ul>
+      <li>The length of the song</li>
+      <li>The tempo of the song, and the multiplier applied to it</li>
+      <li>The file format (whether it is mp3, aac, and so on)</li>
+      <li>Numbers describing how reliably the beat was detected, and the position of the first beat</li>
+      <li>The result of the check made when the song was added (ready to use, or needs a look), and the kind of reason when it needs a look</li>
+      <li>Whether you added a song that was shown as needing a look</li>
+      <li>The result of the quick check made before adding the song, and the kind of reason for it</li>
+      <li>Whether a half-beat correction was applied</li>
+      <li>How the song was added (from the Music app or from the Files app)</li>
+      <li>If you skipped between several songs, the period during which each song played (from how many seconds to how many seconds after you started walking)</li>
+      <li>How the timing offset changed while that song played (a representative value for each of ten equal parts of the time it played)</li>
+      <li>A one-word grouping of the song's character, decided from how evenly the beats are spaced and how far they reach across the song</li></ul>
+    <p>This is sent so that we can investigate why music does not match your steps for songs you add. The title, the artist name, the file name, and the contents of the file itself are never sent.</p>
 
     <h3>14-3 What is not sent</h3>
     <ul>
