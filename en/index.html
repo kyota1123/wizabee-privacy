@@ -71,7 +71,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>(1) Walking measurements — walking tempo, duration, step count, distance (approximate; from the pedometer, not from location), the date and time of the walk, and how closely the music stayed in sync</li>
       <li>(2) Device and app information — device model, app version, iOS version</li>
       <li>(3) An anonymous ID — an identifier generated automatically by the App. It is not linked to your name or contact details, and we cannot identify you from it.</li>
-      <li>(4) Ratings and comments — only if you choose to submit them. Please do not enter information that could identify you.</li>
+      <li>(4) Ratings and comments — the current version has no field for these, and none are sent. (Earlier versions sent them only if you chose to enter them.)</li>
       <li>(5) Technical measurements — playback rate, timing offsets, and configuration values recorded to understand how the App behaved</li>
       <li>(6) Collaborator mode records — only if you have turned on collaborator mode as described in Section 14</li></ul>
     <p>When such data is sent, our server's access log records the originating IP address. This is unavoidable in network communication and is used only to detect unauthorised access and to investigate faults.</p></section>
@@ -162,9 +162,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>Motion sensor readings (accelerometer and gyroscope) for a short period before and after the signal</li>
       <li>The App's internal operating values for the same period, such as playback rate and timing offsets</li>
       <li>For comparison, one or two periods with no signal from the same walk</li>
-      <li>Any note you enter about the signal (optional)</li>
-      <li>Your estimate of how long it took you to send the signal after noticing the problem (chosen from a list)</li>
-      <li>The kind of signal (tempo, sound, or other; you may also leave this unselected)</li>
+      <li>(The fields that earlier versions offered for a note about the signal, your estimate of how long it took you to send it, and the kind of signal are not in the current version. None of these are sent.)</li>
       <li>Which song was playing when you sent the signal (for a song included in the App, its identifier; for a song you added yourself, a fixed value meaning &quot;a song you added&quot;. The titles of songs you add are never included)</li>
       <li>The anonymous ID described in Section 2(3), and the version number of the terms you agreed to</li></ul>
     <p>The comparison periods are sent because we need a baseline to judge whether the moment you signaled was different from normal.</p>
