@@ -50,7 +50,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
   </header>
   <p class="meta"><a href="../">日本語</a></p>
   <p class="lead">Wizabee ("the App") is an iOS application developed and provided by Kyosuke Tachibana ("we", "us"). This policy explains how information is handled in the App.</p>
-  <p class="meta">Effective: June 17, 2026 / Last updated: September 23, 2026</p>
+  <p class="meta">Effective: June 17, 2026 / Last updated: October 3, 2026</p>
   <div class="note">How your information is handled depends on where you live. <strong>If you live outside Japan, we do not collect any personal data from you, as described in Section 13.</strong> Sections 2 through 8 apply to users in Japan.</div>
 
   <section><h2><span class="no">1</span>What we never collect</h2>
@@ -68,7 +68,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>Only if you live in Japan and turn on collaborator mode as described in Section 14, the App sends the following information to our server. Collaborator mode is off by default, and the App works exactly the same whether or not you turn it on.</p>
     <p>This section does not apply to users outside Japan. In those regions no consent prompt is shown and no data is sent. See Section 13.</p>
     <ul>
-      <li>(1) Walking measurements — walking tempo, duration, step count, distance (approximate; from the pedometer, not from location), the date and time of the walk, and how closely the music stayed in sync</li>
+      <li>(1) Walking measurements — walking tempo, duration, step count, distance (approximate; from the pedometer, not from location), the date and time of the walk, how closely the music stayed in sync, and how long each tempo mode (Normal, Half, Three-quarter) was used and how many times it was switched</li>
       <li>(2) Device and app information — device model, app version, iOS version</li>
       <li>(3) An anonymous ID — an identifier generated automatically by the App. It is not linked to your name or contact details, and we cannot identify you from it.</li>
       <li>(4) Ratings and comments — the current version has no field for these, and none are sent. (Earlier versions sent them only if you chose to enter them.)</li>
@@ -157,12 +157,13 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>While collaborator mode is on, you can choose up to three of the included songs and up to five songs you added yourself (you choose which ones). When you turn it off, those choices are released, and just once, right afterwards, you can choose again within the limit that then applies. No song file is ever removed from your device. This is not a purchase, and there is no charge.</p>
 
     <h3>14-2 What is sent in collaborator mode</h3>
-    <p>While collaborator mode is on, if the music feels wrong and you use your earphones to send a signal, the following information is sent to our server:</p>
+    <p>From version 1.7, the App has no way to send a signal, and no new information described in this section is created. However, if records created by version 1.6 or earlier have not yet been sent and remain on your device, they may be sent from version 1.7 or later, but only while Collaborator Mode is on and your consent is in place, and only within 7 days of their creation (up to 5 records). Records are sent only if Collaborator Mode is on and you have given consent, and only after the App confirms that you are using it in Japan. Records older than 7 days are deleted from the device without being sent. If you turn off Collaborator Mode, they are not sent.</p>
+    <p>In version 1.6 or earlier, while collaborator mode is on, if the music feels wrong and you use your earphones to send a signal, the following information is sent to our server:</p>
     <ul>
       <li>Motion sensor readings (accelerometer and gyroscope) for a short period before and after the signal</li>
       <li>The App's internal operating values for the same period, such as playback rate and timing offsets</li>
       <li>For comparison, one or two periods with no signal from the same walk</li>
-      <li>(The fields that earlier versions offered for a note about the signal, your estimate of how long it took you to send it, and the kind of signal are not in the current version. None of these are sent.)</li>
+      <li>(The fields that earlier versions offered for a note about the signal, your estimate of how long it took you to send it, and the kind of signal had already been removed by version 1.6. None of these are sent.)</li>
       <li>Which song was playing when you sent the signal (for a song included in the App, its identifier; for a song you added yourself, a fixed value meaning &quot;a song you added&quot;. The titles of songs you add are never included)</li>
       <li>The anonymous ID described in Section 2(3), and the version number of the terms you agreed to</li></ul>
     <p>The comparison periods are sent because we need a baseline to judge whether the moment you signaled was different from normal.</p>
@@ -195,9 +196,16 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>Whether the walking hint has already been shown (not when it was shown)</li></ul>
     <p>They are not sent when Collaborator Mode is off.</p>
 
+    <h3>14-2-4 Tempo modes</h3>
+    <p>The walking data you share as a collaborator includes how long you used each tempo mode (Normal, Half, Three-quarter) and how many times you switched. We use this to learn how the modes are used and to improve tempo matching. It does not include information that identifies you, such as your name.</p>
+    <ul>
+      <li>For each tempo mode (Normal, Half, Three-quarter), how long it was used during a walk (in seconds)</li>
+      <li>How many times the mode was switched with the on-screen button, and how many times with the earphones</li></ul>
+    <p>Nothing is sent while Collaborator Mode is off.</p>
+
     <h3>14-3 What is not sent</h3>
     <ul>
-      <li>From a walk in which no signal was sent, no motion sensor readings are sent (only the measurements described in Section 2 are sent)</li>
+      <li>From a walk in which no signal was sent (including every walk with version 1.7 or later), no motion sensor readings are sent (only the measurements described in Section 2 are sent; this excludes unsent records created by earlier versions, as described in 14-2)</li>
       <li>Audio itself is never recorded or sent</li>
       <li>As stated in Section 1, location data, contacts, photos, and similar data are never collected</li>
       <li>When you add a song from the Music app, the song is used only on your iPhone and is never sent anywhere</li></ul>
