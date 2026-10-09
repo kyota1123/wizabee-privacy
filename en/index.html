@@ -50,7 +50,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
   </header>
   <p class="meta"><a href="../">日本語</a></p>
   <p class="lead">Wizabee ("the App") is an iOS application developed and provided by Kyosuke Tachibana ("we", "us"). This policy explains how information is handled in the App.</p>
-  <p class="meta">Effective: June 17, 2026 / Last updated: October 7, 2026</p>
+  <p class="meta">Effective: June 17, 2026 / Last updated: October 9, 2026</p>
   <div class="note">How your information is handled depends on where you live. <strong>If you live outside Japan, we do not collect any personal data from you, as described in Section 13.</strong> Sections 2 through 8 apply to users in Japan.</div>
 
   <section><h2><span class="no">1</span>What we never collect</h2>
@@ -63,7 +63,8 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>Contacts, photos, calendar, or other data stored on your device</li></ul>
     <p>The App requests two device permissions: access to motion sensors, and access to your media library when you choose songs from Music. Motion sensors are used to detect your walking tempo. Sensor readings are processed on your device and are used solely to match the music tempo to your steps.</p>
     <p>Each time you walk, the App saves a summary of the walk (date and time, duration, steps, estimated distance, walking tempo, and similar values) and values such as your walking tempo every 10 seconds, on your device. These records are for use within the App and are not sent to us (what is sent in collaborator mode is described in Sections 2 and 14). The App installed from the App Store does not record the raw sensor readings (acceleration and rotation values taken 50 times per second). The records on your device are removed when you delete the App. If you use iPhone backups (such as iCloud Backup), the records may be included in those backups. Backups are kept by Apple's systems, and we do not receive them.</p>
-    <p>Media library access is requested only when you choose to pick songs from Music. It is used only to show the list of songs and to copy the songs you pick into the App. Neither the list nor the songs are ever sent off your device.</p></section>
+    <p>Media library access is requested only when you choose to pick songs from Music. It is used only to show the list of songs and to copy the songs you pick into the App. Neither the list nor the songs are ever sent off your device.</p>
+    <p>In addition, wherever you live, the App connects to our sales server to check the song of the month. The App adds only a random one-time value to this connection — none of the information above and no user ID (for the IP address and other details that reach the server by the nature of network communication, see Section 15).</p></section>
 
   <section><h2><span class="no">2</span>Information we collect</h2>
     <p>Only if you live in Japan and turn on collaborator mode as described in Section 14, the App sends the following information to our server. Collaborator mode is off by default, and the App works exactly the same whether or not you turn it on.</p>
@@ -90,7 +91,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>This section applies wherever you live. Please refer to Apple's privacy policy for how Apple Inc. handles your information.</p></section>
 
   <section><h2><span class="no">6</span>Turning off data upload</h2>
-    <p>You can stop the upload at any time by turning off collaborator mode (Section 14) under "Contribute" in the Settings tab. Once it is off, all sending described in Section 2 and Section 14 stops, and no further information leaves your device.</p>
+    <p>You can stop the upload at any time by turning off collaborator mode (Section 14) under "Contribute" in the Settings tab. Once it is off, all sending described in Section 2 and Section 14 stops, and no further information described in Section 2 or Section 14 leaves your device (the song-of-the-month check in Section 15 continues, but no user ID or similar is added to it).</p>
     <p>Stopping the upload does not delete information that was sent previously. To request deletion, please use the procedure in Section 7.</p></section>
 
   <section><h2><span class="no">7</span>Access and deletion requests</h2>
@@ -125,13 +126,13 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <ul>
       <li>No data described in Section 2 is transmitted</li>
       <li>No consent prompt for data upload is shown</li>
-      <li>No communication with our servers takes place, so no IP address is logged</li>
+      <li>The only communication with our servers is the song-of-the-month check described in Section 15. It sends only a random one-time value, and we keep no record of it, including IP addresses</li>
       <li>No account is created, no login occurs, and no user is identified</li></ul>
-    <p>Outside Japan the App operates entirely on your device. Motion sensor readings are processed locally and are never transmitted.</p>
+    <p>Outside Japan, apart from the song-of-the-month check in Section 15, the App operates entirely on your device. Motion sensor readings are processed locally and are never transmitted.</p>
     <div class="note">Please note that the privacy information shown on the App Store (the privacy "nutrition label") is a single, worldwide listing. It shows the items collected from users in Japan. This is a consequence of how the listing works and does not contradict the fact that no data is actually collected outside Japan.</div>
 
     <h3>13-2 How the region is determined</h3>
-    <p>Data is sent to our server only when the App Store storefront country is Japan <strong>and</strong> the device's region setting is Japan. If either indicates a region other than Japan, no data is transmitted. If the region cannot be determined, no data is transmitted either.</p>
+    <p>The data described in Sections 2 and 14 is sent to our server only when the App Store storefront country is Japan <strong>and</strong> the device's region setting is Japan. If either indicates a region other than Japan, no data is transmitted. If the region cannot be determined, no data is transmitted either.</p>
 
     <h3>13-3 We have not appointed an EU representative (for users in the EEA, the UK, and Switzerland)</h3>
     <p>Because we do not collect personal data from users in the European Economic Area (EEA), the United Kingdom, or Switzerland as described above, we have not appointed a representative in the Union or in the United Kingdom.</p>
@@ -220,6 +221,25 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
 
     <h3>14-6 Users outside Japan</h3>
     <p>As described in Section 13, collaborator mode is not available to users outside Japan. The collaborator mode item is not shown, and no data is sent.</p></section>
+
+  <section id="section-15"><h2><span class="no">15</span>Checking the song of the month</h2>
+
+    <h3>15-1 What this connection is for</h3>
+    <p>The App reads, from our sales server (shop-api.wizabee.com), which song is the "song of the month" (it changes on the 1st of each month, Japan time) and the current time. This happens wherever you live and whether or not collaborator mode is on: when you open the App, when you return to it, and when the month changes.</p>
+
+    <h3>15-2 What is sent</h3>
+    <p>The App sends only a random one-time value, newly created for each request. It is used only to check that the response is genuine, and it does not identify you.</p>
+    <p>Because of how network communication works, your IP address and the information iOS adds to every request automatically (the App's name and build number, the version of the iOS networking component, and your language settings) also reach the server.</p>
+
+    <h3>15-3 What is not sent</h3>
+    <p>This connection does not send the anonymous ID, device model, walk records or collaborator mode records described in Section 2, purchase information, the titles or files of songs you added, your location, your name, or similar information.</p>
+
+    <h3>15-4 What may remain on the server side</h3>
+    <p>Our sales server runs on Cloudflare, Inc.'s platform (Cloudflare Workers). It is configured not to store the content of these requests and not to keep per-request logs (access logs). We do not identify users or create records from this connection.</p>
+    <p>However, the connection passes through Cloudflare's network (including locations outside Japan). Cloudflare may keep aggregated statistics, such as the number of requests, and records of traffic it judges to be an attack, for a period under its own policies, to operate its service and protect against attacks.</p>
+
+    <h3>15-5 If the connection fails</h3>
+    <p>Responses carry our signature, and the App uses only content whose signature it has verified. If the App cannot connect, walking works as usual.</p></section>
 
   <p class="foot"><a href="../support/en/">Support</a>　／　<a href="../">日本語</a>　／　© 2026 Wizabee</p>
 </div>
