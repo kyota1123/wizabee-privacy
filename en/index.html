@@ -49,9 +49,9 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <h1>Wizabee Privacy Policy<span class="sub">iOS app</span></h1>
   </header>
   <p class="meta"><a href="../">日本語</a></p>
-  <p class="lead">Wizabee ("the App") is an iOS application developed and provided by Kyosuke Tachibana ("we", "us"). This policy explains how information is handled in the App.</p>
-  <p class="meta">Effective: June 17, 2026 / Last updated: October 9, 2026</p>
-  <div class="note">How your information is handled depends on where you live. <strong>If you live outside Japan, we do not collect any personal data from you, as described in Section 13.</strong> Sections 2 through 8 apply to users in Japan.</div>
+  <p class="lead">Wizabee ("the App") is an iOS application, including its Apple Watch app, developed and provided by Kyosuke Tachibana ("we", "us"). This policy explains how information is handled in the App.</p>
+  <p class="meta">Effective: June 17, 2026 / Last updated: October 13, 2026</p>
+  <div class="note">How your information is handled depends on where you live. <strong>If you live outside Japan, we do not collect personal data or usage data from you (Section 13 explains this, including the IP address and similar information that briefly reach our server when the App checks the song of the month).</strong> Sections 2 through 8 apply to users in Japan.</div>
 
   <section><h2><span class="no">1</span>What we never collect</h2>
     <p>Regardless of where you live, the App never collects any of the following:</p>
@@ -61,14 +61,34 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>Your name, email address, phone number, or date of birth</li>
       <li>Advertising identifiers</li>
       <li>Contacts, photos, calendar, or other data stored on your device</li></ul>
-    <p>The App requests two device permissions: access to motion sensors, and access to your media library when you choose songs from Music. Motion sensors are used to detect your walking tempo. Sensor readings are processed on your device and are used solely to match the music tempo to your steps.</p>
-    <p>Each time you walk, the App saves a summary of the walk (date and time, duration, steps, estimated distance, walking tempo, and similar values) and values such as your walking tempo every 10 seconds, on your device. These records are for use within the App and are not sent to us (what is sent in collaborator mode is described in Sections 2 and 14). The App installed from the App Store does not record the raw sensor readings (acceleration and rotation values taken 50 times per second). The records on your device are removed when you delete the App. If you use iPhone backups (such as iCloud Backup), the records may be included in those backups. Backups are kept by Apple's systems, and we do not receive them.</p>
-    <p>Media library access is requested only when you choose to pick songs from Music. It is used only to show the list of songs and to copy the songs you pick into the App. Neither the list nor the songs are ever sent off your device.</p>
+    <p>The App requests the following device permissions:</p>
+    <ul>
+      <li>Motion sensors and motion activity: to detect your walking tempo, to record steps and distance, and to tell walking apart from riding in a vehicle when counting the distance for Honey (Section 17).</li>
+      <li>Media library: requested only when you choose to pick songs from Music.</li>
+      <li>Health (optional): requested only when you turn on "Save walks to Health" or "Heart rate limit" in Settings, and when you press ▶ to start a walk with "Heart rate limit" on (on your iPhone and on your Apple Watch). See Section 16.</li></ul>
+    <p>Sensor readings are processed on your device and are used only to match the music tempo to your steps, to make your walk records, and to count the distance for Honey.</p>
+    <p>Each time you walk, the App saves a record of the walk on your device. This record includes a summary of the walk (date and time, duration, steps, distance, walking tempo, and similar values), values such as your walking tempo every 10 seconds, the time of each step as your foot lands, and values such as your walking tempo and the song's speed about every second. The App also saves on your device your Honey and Setlist records (Section 17) and the order of the songs you added that you played most recently. These records stay only on your device, are for use within the App, and are not sent to us (what is sent in collaborator mode is described in Sections 2 and 14). The App installed from the App Store does not record the raw sensor readings (acceleration and rotation values taken 50 times per second).</p>
+    <p>The App also saves the following records only on your device. They are not shown on screen and are not sent to us (not even in collaborator mode). They are deleted when you delete the App (as described in the paragraph below, they may be included in your device backups).</p>
+    <ul>
+      <li>A log of changes to your Honey (time, the amount of Honey added or used, and the reason, such as a walk, adding a song to the Setlist, undoing it, or moving over an earlier version's record)</li>
+      <li>Changes in height during each walk (relative height from the start of the walk, derived from air pressure, every few seconds)</li>
+      <li>Floors climbed up and down (from your device's pedometer)</li>
+      <li>Periods of walking, standing still, and running (from your device's motion activity)</li>
+      <li>Periods for each song (the song, start and end times, and your average walking tempo and the song's average speed during that period)</li>
+      <li>Times when you switched the tempo mode or used the earphone button (triple press)</li>
+      <li>Times when the heart rate limit took effect (when the rest started and ended, and the total rest time; the heart rate values themselves are not kept). This record is kept in a separate file from your walk records and is excluded from iCloud backup</li></ul>
+    <p>The App reads these within the "Motion &amp; Fitness" permission you have already given and does not ask for any new permission. If you have not given the permission, or your device lacks the feature, they are not recorded. The App does not keep your average or maximum heart rate (Section 16).</p>
+    <p>The records on your device are removed when you delete the App, except for the following:</p>
+    <ul>
+      <li>Records included in your iPhone backups (such as iCloud Backup), if you use them. Backups are kept by Apple's systems, and we do not receive them.</li>
+      <li>Workouts saved to Health (Section 16). Delete them in the Health app.</li>
+      <li>Part of your Honey and Setlist records may remain in this device's secure storage (the keychain) after you delete the App, and is carried over if you install it again (Section 17).</li></ul>
+    <p>Media library access is used only to show the list of songs and to copy the songs you pick into the App. Neither the list nor the songs are ever sent off your device.</p>
     <p>In addition, wherever you live, the App connects to our sales server to check the song of the month. The App adds only a random one-time value to this connection — none of the information above and no user ID (for the IP address and other details that reach the server by the nature of network communication, see Section 15).</p></section>
 
   <section><h2><span class="no">2</span>Information we collect</h2>
     <p>Only if you live in Japan and turn on collaborator mode as described in Section 14, the App sends the following information to our server. Collaborator mode is off by default, and the App works exactly the same whether or not you turn it on.</p>
-    <p>This section does not apply to users outside Japan. In those regions no consent prompt is shown and no data is sent. See Section 13.</p>
+    <p>This section does not apply to users outside Japan. In those regions no consent prompt is shown and none of the information described in this section is sent. See Section 13.</p>
     <ul>
       <li>(1) Walking measurements — walking tempo, duration, step count, distance (approximate; from the pedometer, not from location), the date and time of the walk, how closely the music stayed in sync, and how long each tempo mode (Normal, Half, Three-quarter) was used and how many times it was switched</li>
       <li>(2) Device and app information — device model, app version, iOS version</li>
@@ -76,6 +96,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>(4) Ratings and comments — the current version has no field for these, and none are sent. (Earlier versions sent them only if you chose to enter them.)</li>
       <li>(5) Technical measurements — playback rate, timing offsets, and configuration values recorded to understand how the App behaved</li>
       <li>(6) Collaborator mode records — only if you have turned on collaborator mode as described in Section 14</li></ul>
+    <p>Even when collaborator mode is on, your heart rate, values read from Health, and your Honey and Setlist records are never sent.</p>
     <p>When such data is sent, our server's access log records the originating IP address. This is unavoidable in network communication and is used only to detect unauthorised access and to investigate faults.</p></section>
 
   <section><h2><span class="no">3</span>Purpose</h2>
@@ -87,7 +108,8 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>Collected information is retained for one year in principle and deleted after that period.</p></section>
 
   <section><h2><span class="no">5</span>Purchases</h2>
-    <p>Purchases made in the App are processed by Apple Inc. Payment information is handled by Apple Inc. and is never received by us. What we receive from Apple Inc. is aggregated sales figures only.</p>
+    <p>Song purchases and Wizabee Plus subscriptions in the App are processed by Apple Inc. Payment information is handled by Apple Inc. and is never received by us. What we receive from Apple Inc. is aggregated sales figures only. The App checks your purchase status (which songs you bought and whether Wizabee Plus is active) on your device through Apple's systems and does not send it to us.</p>
+    <p>Honey (Section 17) is earned by walking and cannot be bought with money.</p>
     <p>This section applies wherever you live. Please refer to Apple's privacy policy for how Apple Inc. handles your information.</p></section>
 
   <section><h2><span class="no">6</span>Turning off data upload</h2>
@@ -97,7 +119,8 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
   <section><h2><span class="no">7</span>Access and deletion requests</h2>
     <p>To request access to, or deletion of, stored information, please contact us at the address in Section 9, quoting the anonymous ID shown on the collaborator mode screen in Settings.</p>
     <p>We will normally respond within one month.</p>
-    <p>Without the anonymous ID we cannot determine which stored records are yours, because we do not hold your name or any other contact details. In that case we are unable to act on the request.</p></section>
+    <p>Without the anonymous ID we cannot determine which stored records are yours, because we do not hold your name or any other contact details. In that case we are unable to act on the request.</p>
+    <p>The on-device records described in Sections 16 and 17 are not held by us, so they are not covered by access or deletion requests. See those sections for how to delete them.</p></section>
 
   <section><h2><span class="no">8</span>Security</h2>
     <p>Communication is encrypted. Access to stored data is restricted, and the App is configured so that one user's device cannot read another user's information.</p></section>
@@ -116,23 +139,23 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
 
   <section><h2><span class="no">12</span>Automated decision-making</h2>
     <p>We do not carry out automated decision-making that produces legal effects concerning you or similarly significantly affects you.</p>
-    <p>The walking-tempo detection and playback-rate adjustment performed inside the App are device-side features and do not make any determination about your rights or legal status.</p></section>
+    <p>The walking-tempo detection, the playback-rate adjustment, and the slowing of the music when your heart rate stays above your limit (Section 16) are device-side features and do not make any determination about your rights, legal status, or health.</p></section>
 
   <section><h2><span class="no">13</span>For users outside Japan</h2>
 
-    <h3>13-1 We do not collect personal data</h3>
-    <p>For users outside Japan, we do not collect or process any personal data.</p>
+    <h3>13-1 We do not collect personal data or usage data</h3>
+    <p>For users outside Japan, we do not collect personal data or usage data. However, during the song-of-the-month check in Section 15, and only then, your IP address and the information iOS adds to every request automatically (Section 15-2) briefly reach our server because of how network communication works. We do not store them, and we do not use them to identify anyone. How Cloudflare, whose network carries this connection, handles it is described in Section 15-4.</p>
     <p>Specifically:</p>
     <ul>
       <li>No data described in Section 2 is transmitted</li>
       <li>No consent prompt for data upload is shown</li>
       <li>The only communication with our servers is the song-of-the-month check described in Section 15. It sends only a random one-time value, and we keep no record of it, including IP addresses</li>
       <li>No account is created, no login occurs, and no user is identified</li></ul>
-    <p>Outside Japan, apart from the song-of-the-month check in Section 15, the App operates entirely on your device. Motion sensor readings are processed locally and are never transmitted.</p>
+    <p>Outside Japan, the only communication the App has with our servers is the song-of-the-month check in Section 15. Your walk records, records of how you use the App, motion sensor readings, and heart rate are processed on your devices (including between your iPhone and your Apple Watch, if you use one) and are never sent to us. Purchases and subscriptions, and checks of their status, are handled between the App and Apple through Apple's systems (Section 5).</p>
     <div class="note">Please note that the privacy information shown on the App Store (the privacy "nutrition label") is a single, worldwide listing. It shows the items collected from users in Japan. This is a consequence of how the listing works and does not contradict the fact that no data is actually collected outside Japan.</div>
 
     <h3>13-2 How the region is determined</h3>
-    <p>The data described in Sections 2 and 14 is sent to our server only when the App Store storefront country is Japan <strong>and</strong> the device's region setting is Japan. If either indicates a region other than Japan, no data is transmitted. If the region cannot be determined, no data is transmitted either.</p>
+    <p>The data described in Sections 2 and 14 is sent to our server only when the App Store storefront country is Japan <strong>and</strong> the device's region setting is Japan. If either indicates a region other than Japan, this data is not transmitted. If the region cannot be determined, it is not transmitted either.</p>
 
     <h3>13-3 We have not appointed an EU representative (for users in the EEA, the UK, and Switzerland)</h3>
     <p>Because we do not collect personal data from users in the European Economic Area (EEA), the United Kingdom, or Switzerland as described above, we have not appointed a representative in the Union or in the United Kingdom.</p>
@@ -146,7 +169,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>If you have concerns about how we handle your information, you have the right to lodge a complaint with the data protection supervisory authority in the country where you live or work. A list of national supervisory authorities in the EEA is published on the website of the European Data Protection Board (EDPB). In the United Kingdom, the supervisory authority is the Information Commissioner's Office (ICO).</p>
 
     <h3>13-6 Purchases</h3>
-    <p>As stated in Section 5, purchases are processed by Apple Inc. For that processing, Apple Inc. acts as a controller independently of us.</p>
+    <p>As stated in Section 5, song purchases and Wizabee Plus subscriptions are processed by Apple Inc. For that processing, Apple Inc. acts as a controller independently of us.</p>
 
     <h3>13-7 Future changes</h3>
     <p>If we ever change the App so that we do collect personal data outside Japan, we will revise this policy and put the necessary measures in place — including appointing a representative in the Union where required — before making that change.</p></section>
@@ -156,7 +179,8 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <h3>14-1 What collaborator mode is</h3>
     <p>The App includes a way for users to share records from actual use, to help us improve step detection and the accuracy with which music is matched to your steps. We call this collaborator mode.</p>
     <p>You can turn on collaborator mode in the Settings tab. It is on only after you agree to the terms of this section. It is off by default. Turning on collaborator mode also turns on the sending of the information described in Section 2. The walking measurements in Section 2 (1) — the record of your walk — include the duration, step count, distance (approximate), and the date and time of the walk.</p>
-    <p>While collaborator mode is on, you can use all five included songs and choose up to six songs you added yourself (you choose which ones). When you turn it off, those choices are released, and just once, right afterwards, you can choose again within the limit that then applies. No song file is ever removed from your device. This is not a purchase, and there is no charge.</p>
+    <p>Until November 30, 2026 (Japan time), while collaborator mode is on, you can use all five included songs and choose up to six songs you added yourself (you choose which ones). When you turn it off, those choices are released, and just once, right afterwards, you can choose again within the limit that then applies. No song file is ever removed from your device. This is not a purchase, and there is no charge.</p>
+    <p>From December 1, 2026 (Japan time), the songs you can use do not depend on collaborator mode. If you had collaborator mode on before that date, you keep all the included songs and can keep up to six of your own songs in your Setlist (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
 
     <h3>14-2 What is sent in collaborator mode</h3>
     <p>From version 1.7, the App has no way to send a signal, and no new information described in this section is created. However, if records created by version 1.6 or earlier have not yet been sent and remain on your device, they may be sent from version 1.7 or later, but only while Collaborator Mode is on and your consent is in place, and only within 7 days of their creation (up to 5 records). Records are sent only if Collaborator Mode is on and you have given consent, and only after the App confirms that you are using it in Japan. Records older than 7 days are deleted from the device without being sent. If you turn off Collaborator Mode, they are not sent.</p>
@@ -210,7 +234,8 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>From a walk in which no signal was sent (including every walk with version 1.7 or later), no motion sensor readings are sent (only the measurements described in Section 2 are sent; this excludes unsent records created by earlier versions, as described in 14-2)</li>
       <li>Audio itself is never recorded or sent</li>
       <li>As stated in Section 1, location data, contacts, photos, and similar data are never collected</li>
-      <li>When you add a song from the Music app, the song is used only on your iPhone and is never sent anywhere</li></ul>
+      <li>When you add a song from the Music app, the song is used only on your iPhone and is never sent anywhere</li>
+      <li>Your heart rate, values read from Health, your heart rate limit setting, and your Honey and Setlist records are never sent</li></ul>
 
     <h3>14-4 Turning off collaborator mode</h3>
     <p>You can turn off collaborator mode at any time in the Settings tab. Once it is off, nothing further is sent.</p>
@@ -220,7 +245,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>As in Section 4, this information is stored on servers located in Japan, retained for one year in principle, and deleted after that period.</p>
 
     <h3>14-6 Users outside Japan</h3>
-    <p>As described in Section 13, collaborator mode is not available to users outside Japan. The collaborator mode item is not shown, and no data is sent.</p></section>
+    <p>As described in Section 13, collaborator mode is not available to users outside Japan. The collaborator mode item is not shown, and no collaborator mode data is sent.</p></section>
 
   <section id="section-15"><h2><span class="no">15</span>Checking the song of the month</h2>
 
@@ -229,7 +254,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
 
     <h3>15-2 What is sent</h3>
     <p>The App sends only a random one-time value, newly created for each request. It is used only to check that the response is genuine, and it does not identify you.</p>
-    <p>Because of how network communication works, your IP address and the information iOS adds to every request automatically (the App's name and build number, the version of the iOS networking component, and your language settings) also reach the server.</p>
+    <p>Because of how network communication works, your IP address and the information iOS adds to every request automatically (the App's name and build number, values showing the versions of the iOS networking component and of iOS, and your language settings) also reach the server.</p>
 
     <h3>15-3 What is not sent</h3>
     <p>This connection does not send the anonymous ID, device model, walk records or collaborator mode records described in Section 2, purchase information, the titles or files of songs you added, your location, your name, or similar information.</p>
@@ -240,6 +265,49 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
 
     <h3>15-5 If the connection fails</h3>
     <p>Responses carry our signature, and the App uses only content whose signature it has verified. If the App cannot connect, walking works as usual.</p></section>
+
+  <section id="section-16"><h2><span class="no">16</span>Health and Apple Watch</h2>
+    <p>This section applies wherever you live.</p>
+
+    <h3>16-1 It is your choice</h3>
+    <p>The Health and Apple Watch features work only when you turn them on in Settings under "Health and Apple Watch". They are off by default. When you turn one on, and when you press ▶ to start a walk with "Heart rate limit" on, your iPhone and your Apple Watch each ask for Health permission if you have not yet decided on any of the items. You can change the permission at any time in the Health app or in Settings. Walking works the same if you leave them off.</p>
+
+    <h3>16-2 What the App writes to Health</h3>
+    <p>With "Save walks to Health" on, the App saves the duration and distance of each walk to Health as a walking workout. For walks where you measured your heart rate with Wizabee on Apple Watch, the watch saves the workout (including duration, distance, and heart rate), and the iPhone does not save the same walk a second time.</p>
+    <p>The watch, too, saves the workout only when "Save walks to Health" is on in the App on your iPhone (if the watch could not reach your iPhone during the walk, it follows the setting it last received from your iPhone, and saves nothing if it has never received one). Walks shorter than 60 seconds are not saved by either your iPhone or your Apple Watch, even when the setting is on.</p>
+
+    <h3>16-3 What the App reads from Health</h3>
+    <ul>
+      <li>Heart rate: the heart rate measured by Wizabee on Apple Watch during your walks is used only to watch your heart rate limit (16-4). The App does not keep your heart rate on your iPhone after a walk.</li>
+      <li>Workouts: the App reads workouts that Apple Watch or other apps saved for the same time, so that it does not save the same walk twice.</li></ul>
+
+    <h3>16-4 Heart rate limit</h3>
+    <p>When you turn on "Heart rate limit" and enter a limit, Wizabee on Apple Watch opens when you start walking and measures your heart rate. Your heart rate goes directly from your watch to your iPhone through Apple's workout system. If it stays above your limit, the App gradually slows the tempo of the music, and returns it when your heart rate comes down.</p>
+    <p>The limit is a number you choose as a guide. The App is not a medical device. It does not assess your health or give any diagnosis or treatment advice.</p>
+
+    <h3>16-5 Not sent, not used for anything else</h3>
+    <p>Your heart rate and the values read from Health are used only on your iPhone and Apple Watch and are never sent to our server, even when collaborator mode is on. We do not give them to third parties, use them for advertising, or sell them. We do not store them in iCloud.</p>
+
+    <h3>16-6 Where they remain and how to delete them</h3>
+    <ul>
+      <li>The App does not keep heart rate values in its records on your iPhone.</li>
+      <li>Workouts saved to Health remain in Health after you delete the App. Delete them in the Health app.</li>
+      <li>When a workout is not saved (the setting is off, or the walk was shorter than 60 seconds), Wizabee on Apple Watch deletes the values it wrote to Health itself during that walk (such as distance and heart rate). It never deletes values recorded by other apps or devices (including Apple Watch itself).</li></ul></section>
+
+  <section id="section-17"><h2><span class="no">17</span>Honey and Setlist</h2>
+    <p>This section applies wherever you live.</p>
+
+    <h3>17-1 What Honey and the Setlist are</h3>
+    <p>Honey builds up with the distance you walk while playing music in the App. Your Setlist is the set of your own songs you can play without Wizabee Plus. Songs you added that are not in your Setlist are kept in "Stock" and are not deleted. You can use Honey to change the songs in your Setlist. You earn 1 Honey for every 3 km you walk with music playing, and there is no limit to how much you can keep. Honey stays if you end Wizabee Plus. Without Wizabee Plus, the only use of Honey is to change the songs in your Setlist. Honey cannot be bought with money and cannot be exchanged for money. In the App installed from the App Store, Honey and the Setlist are available from December 1, 2026 (Japan time). Walks before then are not counted for Honey.</p>
+
+    <h3>17-2 What is used to count it</h3>
+    <p>The distance for Honey is counted on your device, only for the parts of a walk where the pedometer distance, the App's step detection, and Apple's motion activity (walking or in a vehicle) agree, and music was playing. Location is not used.</p>
+
+    <h3>17-3 Kept only on your device</h3>
+    <p>Your amount of Honey, the distance counted for each day, which songs are in your Setlist (identified by a value made from the file's content, not by title), and the order of the songs you added that you played most recently are stored only on your device and are never sent to us, even when collaborator mode is on.</p>
+
+    <h3>17-4 New phones and deletion</h3>
+    <p>Because these records exist only on your device, they move to a new iPhone only when you restore it from an encrypted backup (including iCloud Backup). They are not synced through iCloud Keychain. We do not hold these records, so we cannot restore them for you.</p></section>
 
   <p class="foot"><a href="../support/en/">Support</a>　／　<a href="../">日本語</a>　／　© 2026 Wizabee</p>
 </div>
