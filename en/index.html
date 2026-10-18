@@ -50,7 +50,8 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
   </header>
   <p class="meta"><a href="../">日本語</a></p>
   <p class="lead">Wizabee ("the App") is an iOS application, including its Apple Watch app, developed and provided by Kyosuke Tachibana ("we", "us"). This policy explains how information is handled in the App.</p>
-  <p class="meta">Effective: June 17, 2026 / Last updated: October 17, 2026</p>
+  <p class="meta">Effective: June 17, 2026 / Last updated: [date]</p>
+  <!-- v2.2 の案（WO-OPS-52・2026-10-18・未公開）。公開の日に日付を入れる。「要確認」の印は、公開の前に確かめて外す -->
   <div class="note">How your information is handled depends on where you live. <strong>If you live outside Japan, we do not collect personal data or usage data from you (Section 13 explains this, including the IP address and similar information that briefly reach our server when the App checks the song of the month).</strong> Sections 2 through 8 apply to users in Japan.</div>
 
   <section><h2><span class="no">1</span>What we never collect</h2>
@@ -63,14 +64,14 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>Contacts, photos, calendar, or other data stored on your device</li></ul>
     <p>The App requests the following device permissions:</p>
     <ul>
-      <li>Motion sensors and motion activity: to detect your walking tempo, to record steps and distance, and to tell walking apart from riding in a vehicle when counting the distance for Honey (Section 17).</li>
+      <li>Motion sensors and motion activity: to detect your walking tempo, to record steps and distance, and to tell walking apart from riding in a vehicle when counting the distance record (Section 17).</li>
       <li>Media library: requested only when you choose to pick songs from Music.</li>
       <li>Health (optional): requested only when you turn on "Save walks to Health" or "Heart rate limit" in Settings, and when you press ▶ to start a walk with "Heart rate limit" on (on your iPhone and on your Apple Watch). See Section 16.</li></ul>
-    <p>Sensor readings are processed on your device and are used only to match the music tempo to your steps, to make your walk records, and to count the distance for Honey.</p>
-    <p>Each time you walk, the App saves a record of the walk on your device. This record includes a summary of the walk (date and time, duration, steps, distance, walking tempo, and similar values), values such as your walking tempo every 10 seconds, the time of each step as your foot lands, and values such as your walking tempo and the song's speed about every second. The App also saves on your device the records of your own songs and your Honey records (Section 17) and the order of the songs you added that you played most recently. These records stay only on your device, are for use within the App, and are not sent to us (what is sent in collaborator mode is described in Sections 2 and 14). The App installed from the App Store does not record the raw sensor readings (acceleration and rotation values taken 50 times per second).</p>
-    <p>The App also saves the following records only on your device. They are not shown on screen and are not sent to us (not even in collaborator mode). They are deleted when you delete the App (as described in the paragraph below, they may be included in your device backups).</p>
+    <p>Sensor readings are processed on your device and are used only to match the music tempo to your steps, to make your walk records, and to count the distance record (Section 17).</p>
+    <p>Each time you walk, the App saves a record of the walk on your device. This record includes a summary of the walk (date and time, duration, steps, distance, walking tempo, and similar values), values such as your walking tempo every 10 seconds, the time of each step as your foot lands, and values such as your walking tempo and the song's speed about every second. The App also saves on your device the records of your own songs and the distance record (Section 17) and the order of the songs you added that you played most recently. These records are for use within the App and are not sent to us. Only if collaborator mode is on, the walk summary and the step-by-step log (footstrike times, beat times, walking tempo, and playback speed) are sent (as described in Sections 2 and 14). The detailed values (every 10 seconds, every step, and about every second) are deleted from your device 90 days after the walk. The walk summary stays.<!-- 要確認 --> The App installed from the App Store does not record the raw sensor readings (acceleration and rotation values taken 50 times per second).</p>
+    <p>The App also saves the following records only on your device and does not send them to us (not even in collaborator mode). From version 2.2, some of them, such as the changes in height, are used for the walk screen (the slope path and graphs). Location is not used. They are deleted when you delete the App (as described in the paragraph below, they may be included in your device backups).</p>
     <ul>
-      <li>A log of changes to your Honey (time, the amount of Honey added or used, and the reason, such as a walk, adding a song to the Setlist, undoing it, or moving over an earlier version's record)</li>
+      <li>A log of changes to the count in the distance record (Section 17) (time, the amount added or used, and the reason, such as a walk, adding a song to the song list, undoing it, or moving over an earlier version's record)</li>
       <li>Changes in height during each walk (relative height from the start of the walk, derived from air pressure, every few seconds)</li>
       <li>Floors climbed up and down (from your device's pedometer)</li>
       <li>Periods of walking, standing still, and running (from your device's motion activity)</li>
@@ -82,7 +83,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <ul>
       <li>Records included in your iPhone backups (such as iCloud Backup), if you use them. Backups are kept by Apple's systems, and we do not receive them.</li>
       <li>Workouts saved to Health (Section 16). Delete them in the Health app.</li>
-      <li>Part of the records of your own songs and your Honey records may remain in this device's secure storage (the keychain) after you delete the App, and is carried over if you install it again (Section 17).</li></ul>
+      <li>Part of the records of your own songs and the distance record may remain in this device's secure storage (the keychain) after you delete the App, and is carried over if you install it again (Section 17).</li></ul>
     <p>Media library access is used only to show the list of songs and to copy the songs you pick into the App. Neither the list nor the songs are ever sent off your device.</p>
     <p>In addition, wherever you live, the App connects to our sales server to check the song of the month. The App adds only a random one-time value to this connection — none of the information above and no user ID (for the IP address and other details that reach the server by the nature of network communication, see Section 15).</p></section>
 
@@ -92,38 +93,61 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <ul>
       <li>(1) Walking measurements — walking tempo, duration, step count, distance (approximate; from the pedometer, not from location), the date and time of the walk, how closely the music stayed in sync, and how long each tempo mode (Normal, Half, Three-quarter) was used and how many times it was switched</li>
       <li>(2) Device and app information — device model, app version, iOS version</li>
-      <li>(3) An anonymous ID — an identifier generated automatically by the App. It is not linked to your name or contact details, and we cannot identify you from it.</li>
-      <li>(4) Ratings and notes — on the summary screen after a walk, you can write a note (free text). While collaborator mode is on, you can also choose a star rating. The note you write and the rating you choose are sent together with that walk's measurements in (1) only if collaborator mode is on. When collaborator mode is off, your note stays only in the walk record on your device and is not sent. Writing a note is optional. The purpose, storage location, and retention period for sent information are described in Sections 3 and 4. Please do not include your name, contact details, or anything else that could identify you in your notes.</li>
+      <li>(3) Contributor ID (anonymous ID) — a random number created automatically by the App. It is not linked to your name or email address. We cannot learn your name or similar details from this number alone.</li>
+      <li>(4) Ratings — while collaborator mode is on, you can choose a star rating and answers about what didn't match (from given choices) on the summary screen after a walk. They are sent together with that walk's measurements in (1). Notes you write on the summary screen (free text) are never sent, even in collaborator mode; they are saved only on this iPhone. Notes sent in collaborator mode with version 2.1 are deleted one year after we received them and are not used for anything other than the purpose stated at that time (improving step detection and the accuracy with which music is matched to your walking pace).</li>
       <li>(5) Technical measurements — playback rate, timing offsets, and configuration values recorded to understand how the App behaved</li>
-      <li>(6) Collaborator mode records — only if you have turned on collaborator mode as described in Section 14</li></ul>
-    <p>Even when collaborator mode is on, your heart rate, values read from Health, and the records of your own songs and your Honey records are never sent.</p>
+      <li>(6) Collaborator mode records — only if you have turned on collaborator mode as described in Section 14</li>
+      <li>(7) Step-by-step log — for each step during a walk, the footstrike time, the beat time, your walking tempo, and the playback speed. It is sent after the walk ends (14-2-5).</li>
+      <li>(8) Tempo-matching values — how your walking tempo was read and how playback speed was adjusted (14-2-5).</li></ul>
+    <p>The purpose, storage location, and retention period for sent information are described in Sections 3 and 4.</p>
+    <p>Even when collaborator mode is on, your heart rate, values read from Health, your location, the notes on the summary screen, and the records of your own songs and the distance record are never sent.</p>
     <p>When such data is sent, our server's access log records the originating IP address. This is unavoidable in network communication and is used only to detect unauthorised access and to investigate faults.</p></section>
 
   <section><h2><span class="no">3</span>Purpose</h2>
-    <p>We use this information solely to improve step detection and the accuracy with which music is matched to your walking pace.</p>
-    <p>We do not share or sell it to third parties, and we do not use it for advertising.</p></section>
+    <p>We use this information only to improve and develop Wizabee's tempo matching and features such as training. We do not use it for other apps or services.</p>
+    <p>Results that cannot be linked to any individual (such as control methods, tuned values and statistics) may also be used in our other products and services. This does not include individual records from which only the contributor ID has been removed. Contributors' records themselves are never taken into other apps or services.</p>
+    <p>On the App Store's privacy information, this use falls under "Analytics".</p>
+    <p>Apart from entrusting storage and processing to the service provider in Section 4, we do not share or sell this information to third parties, and we do not use it for advertising.</p></section>
 
   <section><h2><span class="no">4</span>Where information is stored</h2>
-    <p>Information is stored on servers located in Japan (Supabase, Tokyo region).</p>
-    <p>Collected information is retained for one year in principle and deleted after that period.</p></section>
+    <p>Information received in collaborator mode is stored in the following places.</p>
+    <ul>
+      <li>Supabase (our service provider for storage and processing): a service provided by a US company. Its servers are in Japan (Tokyo region).<!-- 要確認：契約の相手の会社（米国の Supabase, Inc. か、シンガポールの会社か）を契約で確かめる。国が変われば下の 4-2 も直す --></li>
+      <li>A computer managed by us in Japan:
+        <ul>
+          <li>Backup copies for recovery from failures: copies of the records we received, kept for up to 30 days.</li>
+          <li>Working copies for analysis: copies of contributors' records, kept for up to one year after we received them, to improve tempo matching.</li>
+          <li>Both are kept in a location that does not sync with other devices, on an encrypted disk, and are not included in Time Machine or other backups.</li></ul></li></ul>
+    <p>Information we receive is deleted one year after we received it, in principle. Making new copies does not extend this period. Results that can no longer be linked to a contributor ID (such as statistics and values used to tune tempo matching) may be kept after one year.</p>
+    <p>When we accept a deletion request (Section 7), we delete the data from the server, the backup copies, and the working copies within 30 days of accepting it.</p>
+    <h3>4-2 Rules in other countries</h3>
+    <p>Our service provider, Supabase, is a US company. In the United States, personal information is protected by federal laws for specific sectors and by state laws, and the system and individuals' rights differ from those in Japan. A company subject to US law may be required, by a government request that meets legal requirements, to disclose information even if it is stored in Japan. Taking these rules into account, we take the security measures described in Section 8.<!-- 要確認：4-1 の契約の相手の国 --></p></section>
 
   <section><h2><span class="no">5</span>Purchases</h2>
     <p>Song purchases and Wizabee Plus subscriptions in the App are processed by Apple Inc. Payment information is handled by Apple Inc. and is never received by us. What we receive from Apple Inc. is aggregated sales figures only. The App checks your purchase status (which songs you bought and whether Wizabee Plus is active) on your device through Apple's systems and does not send it to us.</p>
-    <p>Honey (Section 17) cannot be bought with money.</p>
     <p>This section applies wherever you live. Please refer to Apple's privacy policy for how Apple Inc. handles your information.</p></section>
 
   <section><h2><span class="no">6</span>Turning off data upload</h2>
-    <p>You can stop the upload at any time by turning off collaborator mode (Section 14) under "Contribute" in the Settings tab. Once it is off, all sending described in Section 2 and Section 14 stops, and no further information described in Section 2 or Section 14 leaves your device (the song-of-the-month check in Section 15 continues, but no user ID or similar is added to it).</p>
-    <p>Stopping the upload does not delete information that was sent previously. To request deletion, please use the procedure in Section 7.</p></section>
+    <p>You can stop the upload at any time with "Stop contributing" under "Contributor" in Settings (Section 14). Once you stop, all sending described in Section 2 and Section 14 stops, and no further information described in Section 2 or Section 14 leaves your device (the song-of-the-month check in Section 15 continues, but no user ID or similar is added to it). However, if you choose "Also delete the data I've sent" when you stop, the App sends only your contributor ID once, to request deletion (Section 7).</p>
+    <p>Stopping does not delete information that was sent previously; it stays until it is deleted after one year. If you want it deleted sooner, choose "Also delete the data I've sent" when you stop, or use the procedure in Section 7.</p></section>
 
   <section><h2><span class="no">7</span>Access and deletion requests</h2>
-    <p>To request access to, or deletion of, stored information, please contact us at the address in Section 9, quoting the anonymous ID shown on the collaborator mode screen in Settings.</p>
+    <!-- 次の段落は、消す依頼の受け口を開けた後に公開する（受け口が閉じている間は外す） -->
+    <p>Deleting from the App: if you choose "Also delete the data I've sent" under Settings &gt; Contributor &gt; Stop contributing, the App sends only your contributor ID to our server, and we accept the deletion request. We delete the data from all the places in Section 4 within 30 days of accepting it.</p>
+    <p>To request access to, or deletion of, stored information, please contact us at the address in Section 9, quoting the contributor ID (anonymous ID) shown on the Contributor screen in Settings.</p>
     <p>We will normally respond within one month.</p>
-    <p>Without the anonymous ID we cannot determine which stored records are yours, because we do not hold your name or any other contact details. In that case we are unable to act on the request.</p>
+    <p>Without the contributor ID we cannot determine which stored records are yours, because we do not hold your name or any other contact details. In that case we are unable to act on the request.</p>
     <p>The on-device records described in Sections 16 and 17 are not held by us, so they are not covered by access or deletion requests. See those sections for how to delete them.</p></section>
 
   <section><h2><span class="no">8</span>Security</h2>
-    <p>Communication is encrypted. Access to stored data is restricted, and the App is configured so that one user's device cannot read another user's information.</p></section>
+    <p>Communication is encrypted. Access to stored data is restricted, and the App is configured so that one user's device cannot read another user's information.</p>
+    <p>We also take the following security measures.</p>
+    <ul>
+      <li>At our service provider, Supabase, stored information is kept encrypted.</li>
+      <li>Only we can access the stored information. The keys for managing it are kept only on our computer.</li>
+      <li>Our computer's disk is encrypted. Backup copies and working copies of records are kept in a location that does not sync with other devices, and are not included in Time Machine or other backups.</li>
+      <li>We entrust data to our service provider under an agreement on how the data is handled.<!-- 要確認：Supabase の DPA が当方の契約に当てはまっているか --></li></ul>
+    <p>For rules in other countries, see Section 4 (4-2).</p></section>
 
   <section><h2><span class="no">9</span>Contact</h2>
     <ul>
@@ -178,9 +202,11 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
 
     <h3>14-1 What collaborator mode is</h3>
     <p>The App includes a way for users to share records from actual use, to help us improve step detection and the accuracy with which music is matched to your steps. We call this collaborator mode.</p>
-    <p>You can turn on collaborator mode in the Settings tab. It is on only after you agree to the terms of this section. It is off by default. Turning on collaborator mode also turns on the sending of the information described in Section 2. The walking measurements in Section 2 (1) — the record of your walk — include the duration, step count, distance (approximate), and the date and time of the walk.</p>
-    <p>Until November 30, 2026 (Japan time), while collaborator mode is on, you can use all five included songs and choose up to six songs you added yourself (you choose which ones). When you turn it off, those choices are released, and just once, right afterwards, you can choose again within the limit that then applies. No song file is ever removed from your device. This is not a purchase, and there is no charge.</p>
-    <p>From December 1, 2026 (Japan time), the songs you can use do not depend on collaborator mode. If you had collaborator mode on before that date, you keep all the included songs and can use up to six of your own songs (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
+    <p>You can turn on collaborator mode under "Contributor" in Settings. It is on only after you agree to the terms of this section. It is off by default. Turning on collaborator mode also turns on the sending of the information described in Section 2. The walking measurements in Section 2 (1) — the record of your walk — include the duration, step count, distance (approximate), and the date and time of the walk.</p>
+    <p>If you become a contributor with version 2.2 or later, you can import your own songs with no limit on the number while you contribute (up to 10 minutes each). This is a limited campaign and may change. If you stop, your 5 most-played songs stay, and the rest are kept locked instead of being deleted. This is not a purchase, there is no charge, and it is not a substitute for buying Wizabee Plus.</p>
+    <p>Because version 2.2 sends more (such as the step-by-step log), we ask existing contributors to agree again. If you do not agree, collaborator mode is turned off and the new items are not sent.</p>
+    <p>If you had collaborator mode on with version 2.1 or earlier: until November 30, 2026 (Japan time), while collaborator mode is on, you can use all five included songs<!-- 要確認 --> and choose up to six songs you added yourself (you choose which ones). When you turn it off, those choices are released, and just once, right afterwards, you can choose again within the limit that then applies. No song file is ever removed from your device. This is not a purchase, and there is no charge.</p>
+    <p>If you had collaborator mode on before December 1, 2026 (Japan time), you keep all the included songs and can use up to six of your own songs (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
 
     <h3>14-2 What is sent in collaborator mode</h3>
     <p>From version 1.7, the App has no way to send a signal, and no new information described in this section is created. However, if records created by version 1.6 or earlier have not yet been sent and remain on your device, they may be sent from version 1.7 or later, but only while Collaborator Mode is on and your consent is in place, and only within 7 days of their creation (up to 5 records). Records are sent only if Collaborator Mode is on and you have given consent, and only after the App confirms that you are using it in Japan. Records older than 7 days are deleted from the device without being sent. If you turn off Collaborator Mode, they are not sent.</p>
@@ -229,20 +255,29 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>How many times the mode was switched with the on-screen button, and how many times with the earphones</li></ul>
     <p>Nothing is sent while Collaborator Mode is off.</p>
 
+    <h3>14-2-5 Step-by-step log and tempo-matching values (from version 2.2)</h3>
+    <p>Only while collaborator mode is on and you have agreed to the version 2.2 terms, the following records of a walk are sent after the walk ends. For walks with songs you added, this applies only if you have agreed to the terms in 14-2-2.<!-- 要確認：アプリが、取り込んだ曲の同意の無い回の一歩ごとの記録を送らないか --></p>
+    <ul>
+      <li>The footstrike time of each step, and the beat time</li>
+      <li>Your walking tempo and the playback speed</li>
+      <li>How your walking tempo was read and how playback speed was adjusted</li></ul>
+    <p>These records are stored in Supabase's file storage (Section 4), kept separately for each contributor ID. They do not include raw motion sensor readings (acceleration and rotation values). They are used to improve tempo matching.</p>
+
     <h3>14-3 What is not sent</h3>
     <ul>
-      <li>From a walk in which no signal was sent (including every walk with version 1.7 or later), no motion sensor readings are sent (only the measurements described in Section 2 are sent; this excludes unsent records created by earlier versions, as described in 14-2)</li>
+      <li>From a walk in which no signal was sent (including every walk with version 1.7 or later), no raw motion sensor readings (acceleration and rotation values) are sent (the measurements described in Section 2 and the step-by-step log in 14-2-5 are sent; this excludes unsent records created by earlier versions, as described in 14-2)<!-- 要確認 --></li>
+      <li>Notes on the summary screen (free text) are never sent</li>
       <li>Audio itself is never recorded or sent</li>
       <li>As stated in Section 1, location data, contacts, photos, and similar data are never collected</li>
       <li>When you add a song from the Music app, the song is used only on your iPhone and is never sent anywhere</li>
-      <li>Your heart rate, values read from Health, your heart rate limit setting, and the records of your own songs and your Honey records are never sent</li></ul>
+      <li>Your heart rate, values read from Health, your heart rate limit setting, and the records of your own songs and the distance record are never sent</li></ul>
 
     <h3>14-4 Turning off collaborator mode</h3>
-    <p>You can turn off collaborator mode at any time in the Settings tab. Once it is off, nothing further is sent.</p>
-    <p>Turning it off does not delete information that was sent previously. To request deletion, please use the procedure in Section 7.</p>
+    <p>You can stop at any time with Settings &gt; Contributor &gt; Stop contributing. After you stop, nothing further is sent (except the contributor ID sent once to request deletion, if you choose "Also delete the data I've sent").</p>
+    <p>If you choose "Also delete the data I've sent" when you stop, we delete the data you've sent within 30 days (Section 7). If you don't, it will still be deleted after one year.<!-- 30日の文は、消す依頼の受け口を開けた後に公開する --></p>
 
     <h3>14-5 Where information is stored and for how long</h3>
-    <p>As in Section 4, this information is stored on servers located in Japan, retained for one year in principle, and deleted after that period.</p>
+    <p>As described in Section 4.</p>
 
     <h3>14-6 Users outside Japan</h3>
     <p>As described in Section 13, collaborator mode is not available to users outside Japan. The collaborator mode item is not shown, and no collaborator mode data is sent.</p></section>
@@ -294,23 +329,23 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>Workouts saved to Health remain in Health after you delete the App. Delete them in the Health app.</li>
       <li>When a workout is not saved (the setting is off, or the walk was shorter than 60 seconds), Wizabee on Apple Watch deletes the values it wrote to Health itself during that walk (such as distance and heart rate). It never deletes values recorded by other apps or devices (including Apple Watch itself).</li></ul></section>
 
-  <section id="section-17"><h2><span class="no">17</span>Records of your own songs, and Honey</h2>
+  <section id="section-17"><h2><span class="no">17</span>Records of your own songs, and the distance record</h2>
     <p>This section applies wherever you live.</p>
 
     <h3>17-1 How many of your own songs you can use, and locked songs</h3>
-    <p>Without Wizabee Plus, you can use up to 5 songs you added yourself (each up to 10 minutes). The song of the month and songs you bought don't count. With Wizabee Plus, there is no limit on the number of songs, and each can be up to 3 hours long. When Wizabee Plus ends, your 5 most-played songs stay available, and your other songs are locked for safekeeping instead of being deleted. You can swap a locked song with one of the songs you kept, and if you subscribe to Wizabee Plus again, you can use them all. For the App obtained from the App Store, these rules apply from December 1, 2026 (Japan time).</p>
+    <p>Without Wizabee Plus, you can use up to 5 songs you added yourself (each up to 10 minutes). The song of the month and songs you bought don't count. With Wizabee Plus, there is no limit on the number of songs, and each can be up to 3 hours long. When Wizabee Plus ends, your 5 most-played songs stay available, and your other songs are locked for safekeeping instead of being deleted. You can swap a locked song with one of the songs you kept, and if you subscribe to Wizabee Plus again, you can use them all. For the App obtained from the App Store, these rules apply from December 1, 2026 (Japan time). For collaborator mode, see 14-1.</p>
 
     <h3>17-2 How "most-played" is worked out</h3>
     <p>The most-played order is worked out on your device from the song segments in your walk records (Section 1), by adding up how long each song played (if two songs are equal, the one you played more recently comes first). Location is not used.</p>
 
-    <h3>17-3 Honey</h3>
-    <p>From version 2.1, Honey and the Setlist are no longer shown in the App and cannot be used. However, the App keeps making its record of your amount of Honey and the distance counted, on your device, in the same way as earlier versions. The distance for Honey is counted on your device, only for the parts of a walk where the pedometer distance, the App's step detection, and Apple's motion activity (walking or in a vehicle) agree, and music was playing. Location is not used. Honey cannot be bought with money and has no cash value.</p>
+    <h3>17-3 The distance record (a feature of earlier versions)</h3>
+    <p>Earlier versions had a count that grew with the distance you walked while music was playing, and a way to use that count to add songs to a song list. From version 2.1, this feature is no longer shown in the App and cannot be used. However, the App keeps making its record of that count and the distance counted, on your device, in the same way as earlier versions. The distance is counted on your device, only for the parts of a walk where the pedometer distance, the App's step detection, and Apple's motion activity (walking or in a vehicle) agree, and music was playing. Location is not used. The count cannot be bought with money and has no cash value.<!-- 要確認 --></p>
 
     <h3>17-4 Kept only on your device</h3>
-    <p>Which of your songs are available and which are locked (identified by a value made from the file's content, not by title), your amount of Honey, the distance counted for each day, and the order of the songs you added that you played most recently are stored only on your device and are never sent to us, even when collaborator mode is on.</p>
+    <p>Which of your songs are available and which are locked (identified by a value made from the file's content, not by title), the count in 17-3, the distance counted for each day, and the order of the songs you added that you played most recently are stored only on your device and are never sent to us, even when collaborator mode is on.</p>
 
     <h3>17-5 New phones and deletion</h3>
-    <p>Because the records of your own songs and your Honey records exist only on your device, they move to a new iPhone only when you restore it from an encrypted backup (including iCloud Backup). They are not synced through iCloud Keychain. We do not hold these records, so we cannot restore them for you.</p></section>
+    <p>Because the records of your own songs and the distance record exist only on your device, they move to a new iPhone only when you restore it from an encrypted backup (including iCloud Backup). They are not synced through iCloud Keychain. We do not hold these records, so we cannot restore them for you.</p></section>
 
   <p class="foot"><a href="../support/en/">Support</a>　／　<a href="../">日本語</a>　／　© 2026 Wizabee</p>
 </div>
