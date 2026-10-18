@@ -88,7 +88,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>In addition, wherever you live, the App connects to our sales server to check the song of the month. The App adds only a random one-time value to this connection — none of the information above and no user ID (for the IP address and other details that reach the server by the nature of network communication, see Section 15).</p></section>
 
   <section><h2><span class="no">2</span>Information we collect</h2>
-    <p>Only if you live in Japan and turn on collaborator mode as described in Section 14, the App sends the following information to our server. Collaborator mode is off by default, and the App works exactly the same whether or not you turn it on.</p>
+    <p>Only if you live in Japan and turn on collaborator mode as described in Section 14, the App sends the following information to our server. Collaborator mode is off by default, and walking works the same whether or not you turn it on (the thank-you for contributors is described in 14-1).</p>
     <p>This section does not apply to users outside Japan. In those regions no consent prompt is shown and none of the information described in this section is sent. See Section 13.</p>
     <ul>
       <li>(1) Walking measurements — walking tempo, duration, step count, distance (approximate; from the pedometer, not from location), the date and time of the walk, how closely the music stayed in sync, and how long each tempo mode (Normal, Half, Three-quarter) was used and how many times it was switched</li>
@@ -128,7 +128,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>This section applies wherever you live. Please refer to Apple's privacy policy for how Apple Inc. handles your information.</p></section>
 
   <section><h2><span class="no">6</span>Turning off data upload</h2>
-    <p>You can stop the upload at any time with "Stop contributing" under "Contributor" in Settings (Section 14). Once you stop, all sending described in Section 2 and Section 14 stops, and no further information described in Section 2 or Section 14 leaves your device (the song-of-the-month check in Section 15 continues, but no user ID or similar is added to it). However, if you choose "Also delete the data I've sent" when you stop, the App sends only your contributor ID once, to request deletion (Section 7).</p>
+    <p>You can stop the upload at any time with "Stop contributing" under "Contributor" in Settings (Section 14). Once you stop, all sending described in Section 2 and Section 14 stops, and no further information described in Section 2 or Section 14 leaves your device (the song-of-the-month check in Section 15 continues, but no user ID or similar is added to it). However, if you choose "Also delete the data I've sent" when you stop, the App sends only your contributor ID once, to request deletion (Section 7).<!-- この1文と次の段落の「送った記録も消す」は、消す依頼の受け口を開けた後に公開する --></p>
     <p>Stopping does not delete information that was sent previously; it stays until it is deleted after one year. If you want it deleted sooner, choose "Also delete the data I've sent" when you stop, or use the procedure in Section 7.</p></section>
 
   <section><h2><span class="no">7</span>Access and deletion requests</h2>
@@ -144,7 +144,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>We also take the following security measures.</p>
     <ul>
       <li>At our service provider, Supabase, stored information is kept encrypted.</li>
-      <li>Only we can access the stored information. The keys for managing it are kept only on our computer.</li>
+      <li>On our side, only we handle the stored information. The keys for managing it are kept only on our computer (our service provider's staff may handle it as needed under our agreement with the provider).</li>
       <li>Our computer's disk is encrypted. Backup copies and working copies of records are kept in a location that does not sync with other devices, and are not included in Time Machine or other backups.</li>
       <li>We entrust data to our service provider under an agreement on how the data is handled.<!-- 要確認：Supabase の DPA が当方の契約に当てはまっているか --></li></ul>
     <p>For rules in other countries, see Section 4 (4-2).</p></section>
@@ -206,7 +206,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>If you become a contributor with version 2.2 or later, you can import your own songs with no limit on the number while you contribute (up to 10 minutes each). This is a limited campaign and may change. If you stop, your 5 most-played songs stay, and the rest are kept locked instead of being deleted. This is not a purchase, there is no charge, and it is not a substitute for buying Wizabee Plus.</p>
     <p>Because version 2.2 sends more (such as the step-by-step log), we ask existing contributors to agree again. If you do not agree, collaborator mode is turned off and the new items are not sent.</p>
     <p>If you had collaborator mode on with version 2.1 or earlier: until November 30, 2026 (Japan time), while collaborator mode is on, you can use all five included songs<!-- 要確認 --> and choose up to six songs you added yourself (you choose which ones). When you turn it off, those choices are released, and just once, right afterwards, you can choose again within the limit that then applies. No song file is ever removed from your device. This is not a purchase, and there is no charge.</p>
-    <p>If you had collaborator mode on before December 1, 2026 (Japan time), you keep all the included songs and can use up to six of your own songs (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
+    <p>If you had collaborator mode on before December 1, 2026 (Japan time), the version 2.2 terms above (no limit on the number, up to 10 minutes each) apply while you contribute, and after you stop, you keep<!-- 要確認：v2.1 の窓（WO-V21-73 の見直す一覧 3） --> all the included songs and can use up to six of your own songs (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
 
     <h3>14-2 What is sent in collaborator mode</h3>
     <p>From version 1.7, the App has no way to send a signal, and no new information described in this section is created. However, if records created by version 1.6 or earlier have not yet been sent and remain on your device, they may be sent from version 1.7 or later, but only while Collaborator Mode is on and your consent is in place, and only within 7 days of their creation (up to 5 records). Records are sent only if Collaborator Mode is on and you have given consent, and only after the App confirms that you are using it in Japan. Records older than 7 days are deleted from the device without being sent. If you turn off Collaborator Mode, they are not sent.</p>
@@ -273,7 +273,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>Your heart rate, values read from Health, your heart rate limit setting, and the records of your own songs and the distance record are never sent</li></ul>
 
     <h3>14-4 Turning off collaborator mode</h3>
-    <p>You can stop at any time with Settings &gt; Contributor &gt; Stop contributing. After you stop, nothing further is sent (except the contributor ID sent once to request deletion, if you choose "Also delete the data I've sent").</p>
+    <p>You can stop at any time with Settings &gt; Contributor &gt; Stop contributing. After you stop, nothing further is sent (except the contributor ID sent once to request deletion, if you choose "Also delete the data I've sent").<!-- 括弧の中は、消す依頼の受け口を開けた後に公開する --></p>
     <p>If you choose "Also delete the data I've sent" when you stop, we delete the data you've sent within 30 days (Section 7). If you don't, it will still be deleted after one year.<!-- 30日の文は、消す依頼の受け口を開けた後に公開する --></p>
 
     <h3>14-5 Where information is stored and for how long</h3>
