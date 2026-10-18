@@ -52,7 +52,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
   <p class="lead">Wizabee ("the App") is an iOS application, including its Apple Watch app, developed and provided by Kyosuke Tachibana ("we", "us"). This policy explains how information is handled in the App.</p>
   <p class="meta">Effective: June 17, 2026 / Last updated: [date]</p>
   <!-- v2.2 の案（WO-OPS-52・2026-10-18・未公開）。公開の日に日付を入れる。「要確認」の印は、公開の前に確かめて外す -->
-  <div class="note">How your information is handled depends on where you live. <strong>If you live outside Japan, we do not collect personal data or usage data from you (Section 13 explains this, including the IP address and similar information that briefly reach our server when the App checks the song of the month).</strong> Sections 2 through 8 apply to users in Japan.</div>
+  <div class="note">How your information is handled depends on where you live. <strong>If you live outside Japan, we do not collect personal data or usage data from you (Section 13 explains this, including the IP address and similar information that briefly reach our server when the App checks the song of the month).</strong> Sections 2 through 8 apply to users in Japan. However, the parts of Section 4-2 about the song-of-the-month check and about viewing this policy and the support page apply wherever you live.</div>
 
   <section><h2><span class="no">1</span>What we never collect</h2>
     <p>Regardless of where you live, the App never collects any of the following:</p>
@@ -101,7 +101,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>(8) Tempo-matching values — how your walking tempo was read and how playback speed was adjusted (14-2-5).</li></ul>
     <p>The purpose, storage location, and retention period for sent information are described in Sections 3 and 4.</p>
     <p>Even when collaborator mode is on, your heart rate, values read from Health, your location, the notes on the summary screen, and the records of your own songs and the distance record are never sent.</p>
-    <p>When such data is sent, our server's access log records the originating IP address. This is unavoidable in network communication and is used only to detect unauthorised access and to investigate faults.</p></section>
+    <p>When such data is sent, the originating IP address is recorded in Supabase's access log. We use this log only to detect unauthorised access and to investigate faults.</p></section>
 
   <section><h2><span class="no">3</span>Purpose</h2>
     <p>We use this information only to improve and develop Wizabee's tempo matching and features such as training. We do not use it for other apps or services.</p>
@@ -112,7 +112,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
   <section><h2><span class="no">4</span>Where information is stored</h2>
     <p>Information received in collaborator mode is stored in the following places.</p>
     <ul>
-      <li>Supabase (our service provider for storage and processing): a service provided by a US company. Its servers are in Japan (Tokyo region).<!-- 要確認：契約の相手の会社（米国の Supabase, Inc. か、シンガポールの会社か）を契約で確かめる。国が変われば下の 4-2 も直す --></li>
+      <li>Supabase (our service provider for storage and processing): a service provided by Supabase Pte. Ltd., a company in Singapore. Its servers are in Japan (Tokyo region).</li>
       <li>A computer managed by us in Japan:
         <ul>
           <li>Backup copies for recovery from failures: copies of the records we received, kept for up to 30 days.</li>
@@ -121,7 +121,13 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>Information we receive is deleted one year after we received it, in principle. Making new copies does not extend this period. Results that can no longer be linked to a contributor ID (such as statistics and values used to tune tempo matching) may be kept after one year.</p>
     <p>When we accept a deletion request (Section 7), we delete the data from the server, the backup copies, and the working copies within 30 days of accepting it.</p>
     <h3>4-2 Rules in other countries</h3>
-    <p>Our service provider, Supabase, is a US company. In the United States, personal information is protected by federal laws for specific sectors and by state laws, and the system and individuals' rights differ from those in Japan. A company subject to US law may be required, by a government request that meets legal requirements, to disclose information even if it is stored in Japan. Taking these rules into account, we take the security measures described in Section 8.<!-- 要確認：4-1 の契約の相手の国 --></p></section>
+    <p>Contributor data is stored in the database and file storage provided by Supabase Pte. Ltd., a company in Singapore. The servers are located in Japan (Tokyo).<!-- 要確認：ファイルを置く仕組み（raw-motion）の置き場所も東京か --> In Singapore, the Personal Data Protection Act 2012 governs how private-sector organizations handle personal data. Singapore joined the APEC Cross-Border Privacy Rules (CBPR) system in February 2018 and is also a member of the Global CBPR Forum, which was set up later. According to a survey by Japan's Personal Information Protection Commission (as of October 2021, updated 25 January 2022), under Singapore's Criminal Procedure Code, police officers at or above a specified rank can require businesses to produce information by written order, and there are no provisions requiring approval by an independent body or similar safeguards for those production orders.</p>
+    <p>The following US companies are also involved in the App's communications, in our service provider's systems, or in publishing this policy and related pages.</p>
+    <ul>
+      <li>Cloudflare, Inc.: (1) The song-of-the-month check (Section 15) is received by our sales server, which runs on Cloudflare Workers. This check happens wherever you live and whether or not collaborator mode is on, and it contains no contributor data. With this check, your IP address and the information iOS adds to it automatically (Section 15-2) reach Cloudflare. Our sales server is configured not to store the content of this check and not to keep access logs.<!-- 要確認：Cloudflare のダッシュボードで、WAF・レート制限の規則を掛けたか（掛けていれば、規則に当たった通信の記録が Cloudflare に残る） --> (2) What the App sends to Supabase in collaborator mode also passes through the Cloudflare network that Supabase uses, and your IP address and similar information reach Cloudflare. The IP address of this traffic is recorded in Supabase's access log, as described in Section 2.<!-- 要確認：Supabase のプランと、アクセスログ（API のログ）の実際の保持期間 --> Cloudflare may keep records, such as records of traffic it judges to be an attack, for a period under its own policies, to operate its service and protect against attacks.</li>
+      <li>Amazon Web Services, Inc.: the company Supabase uses to host its databases. The servers holding contributor data are in Japan (Tokyo).</li>
+      <li>GitHub, Inc.: this policy and the support page are published on GitHub Pages. When you open these pages, GitHub logs your IP address for security purposes.</li></ul>
+    <p>In the United States, personal information is protected by sector-specific federal laws and state laws, and the applicable protections and individual rights differ from those in Japan. A company subject to US law may be required, under valid legal process, to disclose information in its possession, custody, or control to government authorities, even when that information is stored outside the United States. Taking the rules in Singapore and the United States into account, we take the security measures described in Section 8.</p></section>
 
   <section><h2><span class="no">5</span>Purchases</h2>
     <p>Song purchases and Wizabee Plus subscriptions in the App are processed by Apple Inc. Payment information is handled by Apple Inc. and is never received by us. What we receive from Apple Inc. is aggregated sales figures only. The App checks your purchase status (which songs you bought and whether Wizabee Plus is active) on your device through Apple's systems and does not send it to us.</p>
@@ -168,7 +174,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
   <section><h2><span class="no">13</span>For users outside Japan</h2>
 
     <h3>13-1 We do not collect personal data or usage data</h3>
-    <p>For users outside Japan, we do not collect personal data or usage data. However, during the song-of-the-month check in Section 15, and only then, your IP address and the information iOS adds to every request automatically (Section 15-2) briefly reach our server because of how network communication works. We do not store them, and we do not use them to identify anyone. How Cloudflare, whose network carries this connection, handles it is described in Section 15-4.</p>
+    <p>For users outside Japan, we do not collect personal data or usage data. However, during the song-of-the-month check in Section 15, and only then, your IP address and the information iOS adds to every request automatically (Section 15-2) briefly reach our server because of how network communication works. We do not store them, and we do not use them to identify anyone. How Cloudflare, whose network carries this connection, handles it is described in Section 15-4. When you open this policy or the support page, GitHub logs your IP address; see Section 4-2.</p>
     <p>Specifically:</p>
     <ul>
       <li>No data described in Section 2 is transmitted</li>
