@@ -50,22 +50,23 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
   </header>
   <p class="meta"><a href="../">日本語</a></p>
   <p class="lead">Wizabee ("the App") is an iOS application, including its Apple Watch app, developed and provided by Kyosuke Tachibana ("we", "us"). This policy explains how information is handled in the App.</p>
-  <p class="meta">Effective: June 17, 2026 / Last updated: October 19, 2026</p>
+  <p class="meta">Effective: June 17, 2026 / Last updated: [date]</p>
   <div class="note">How your information is handled depends on where you live. <strong>If you live outside Japan, we do not collect personal data or usage data from you (Section 13 explains this, including the IP address and similar information that briefly reach our server when the App checks the song of the month).</strong> Sections 2 through 8 apply to users in Japan. However, the parts of Section 4-2 about the song-of-the-month check and about viewing this policy and the support page apply wherever you live.</div>
 
   <section><h2><span class="no">1</span>What we never collect</h2>
     <p>Regardless of where you live, the App never collects any of the following:</p>
     <ul>
-      <li>Location data</li>
       <li>Audio (the microphone is not used)</li>
       <li>Your name, email address, phone number, or date of birth</li>
       <li>Advertising identifiers</li>
       <li>Contacts, photos, calendar, or other data stored on your device</li></ul>
+    <p>Location is used only if you choose "GPS with map" in Settings (the map route), and only during a walk you start in the App (Section 18). It is not sent to Wizabee's servers; the map is shown with Apple Maps.</p>
     <p>The App requests the following device permissions:</p>
     <ul>
       <li>Motion sensors and motion activity: to detect your walking tempo, to record steps and distance, and to tell walking apart from riding in a vehicle when counting the distance record (Section 17).</li>
       <li>Media library: requested only when you choose to pick songs from Music.</li>
-      <li>Health (optional): requested only when you turn on "Save walks to Health" or "Heart rate limit" in Settings, and when you press ▶ to start a walk with "Heart rate limit" on (on your iPhone and on your Apple Watch). See Section 16.</li></ul>
+      <li>Health (optional): requested only when you turn on "Save walks to Health" or "Heart rate limit" in Settings, and when you press ▶ to start a walk with "Heart rate limit" on (on your iPhone and on your Apple Watch). See Section 16.</li>
+      <li>Location (optional): requested ("While Using the App") only when you choose "GPS with map" in Settings. See Section 18.</li></ul>
     <p>Sensor readings are processed on your device and are used only to match the music tempo to your steps, to make your walk records, and to count the distance record (Section 17).</p>
     <p>Each time you walk, the App saves a record of the walk on your device. This record includes a summary of the walk (date and time, duration, steps, distance, walking tempo, and similar values), values such as your walking tempo every 10 seconds, the time of each step as your foot lands, and values such as your walking tempo and the song's speed about every second. The App also saves on your device the records of your own songs and the distance record (Section 17) and the order of the songs you added that you played most recently. These records are for use within the App and are not sent to us. Only if collaborator mode is on, the walk summary and the step-by-step log (footstrike times, beat times, walking tempo, and playback speed) are sent (as described in Sections 2 and 14). The detailed values (every 10 seconds, every step, and about every second) are deleted from your device 90 days after the walk. The walk summary stays. The App installed from the App Store does not record the raw sensor readings (acceleration and rotation values taken 50 times per second).</p>
     <p>The App also saves the following records only on your device and does not send them to us (not even in collaborator mode). From version 2.2, some of them, such as the changes in height, are used for the walk screen (the slope path and graphs). Location is not used. They are deleted when you delete the App (as described in the paragraph below, they may be included in your device backups).</p>
@@ -99,7 +100,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>(7) Step-by-step log — for each step during a walk, the footstrike time, the beat time, your walking tempo, and the playback speed. It is sent after the walk ends (14-2-5).</li>
       <li>(8) Tempo-matching values — how your walking tempo was read and how playback speed was adjusted (14-2-5).</li></ul>
     <p>The purpose, storage location, and retention period for sent information are described in Sections 3 and 4.</p>
-    <p>Even when collaborator mode is on, your heart rate, values read from Health, your location, the notes on the summary screen, and the records of your own songs and the distance record are never sent.</p>
+    <p>Even when collaborator mode is on, your heart rate, values read from Health, your location, the notes on the summary screen, and the distance record are never sent. For people who are not contributors, no records about their own songs are sent. Contributors send only the values in 14-2-2 (never the title, the file name or the audio itself).</p>
     <p>When such data is sent, the originating IP address is recorded in Supabase's access log. We use this log only to detect unauthorised access and to investigate faults.</p></section>
 
   <section><h2><span class="no">3</span>Purpose</h2>
@@ -220,10 +221,11 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <h3>14-1 What collaborator mode is</h3>
     <p>The App includes a way for users to share records from actual use, to help us improve step detection and the accuracy with which music is matched to your steps. We call this collaborator mode.</p>
     <p>You can turn on collaborator mode under "Contributor" in Settings. It is on only after you agree to the terms of this section. It is off by default. Turning on collaborator mode also turns on the sending of the information described in Section 2. The walking measurements in Section 2 (1) — the record of your walk — include the duration, step count, distance (approximate), and the date and time of the walk.</p>
-    <p>If you become a contributor with version 2.2 or later, you can import your own songs with no limit on the number while you contribute (up to 10 minutes each). This is a limited campaign and may change. If you stop, your 5 most-played songs stay, and the rest are kept locked instead of being deleted. This is not a purchase, there is no charge, and it is not a substitute for buying Wizabee Plus.</p>
+    <p>Contributors receive a benefit. Its details are shown in the app and may change.</p>
+    <p>While you contribute, you can import your own songs up to the number shown in the app (up to 10 minutes each). What happens to your songs if you stop contributing is shown in the app.</p>
     <p>Because version 2.2 sends more (such as the step-by-step log), we ask existing contributors to agree again. If you do not agree, collaborator mode is turned off and the new items are not sent.</p>
     <p>If you had collaborator mode on with version 2.1 or earlier: until November 30, 2026 (Japan time), while collaborator mode is on, you can use all five included songs and choose up to six songs you added yourself (you choose which ones). When you turn it off, those choices are released, and just once, right afterwards, you can choose again within the limit that then applies. No song file is ever removed from your device. This is not a purchase, and there is no charge.</p>
-    <p>If you had collaborator mode on before December 1, 2026 (Japan time), the version 2.2 terms above (no limit on the number, up to 10 minutes each) apply while you contribute, and after you stop, you keep all the included songs and can use up to six of your own songs (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
+    <p>If you had collaborator mode on before December 1, 2026 (Japan time), the benefit above applies while you contribute, and after you stop, you keep all the included songs and can use up to six of your own songs (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
 
     <h3>14-2 What is sent in collaborator mode</h3>
     <p>From version 1.7, the App has no way to send a signal, and no new information described in this section is created. However, if records created by version 1.6 or earlier have not yet been sent and remain on your device, they may be sent from version 1.7 or later, but only while Collaborator Mode is on and your consent is in place, and only within 7 days of their creation (up to 5 records). Records are sent only if Collaborator Mode is on and you have given consent, and only after the App confirms that you are using it in Japan. Records older than 7 days are deleted from the device without being sent. If you turn off Collaborator Mode, they are not sent.</p>
@@ -240,18 +242,16 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <h3>14-2-2 What is sent when you walk to a song you added</h3>
     <p>Only while collaborator mode is on and you have agreed to the terms covering songs you add, the following is sent for each song you played, for walks in which you played songs you added yourself. If you have not agreed to those terms, nothing from that walk is sent at all, including the measurements described in Section 2.</p>
     <ul>
-      <li>The length of the song</li>
-      <li>The tempo of the song, and the multiplier applied to it</li>
-      <li>The file format (whether it is mp3, aac, and so on)</li>
-      <li>Numbers describing how reliably the beat was detected, and the position of the first beat</li>
+      <li>The tempo of the song</li>
+      <li>The multiplier applied to the tempo</li>
+      <li>Numbers describing how reliably the beat was detected</li>
       <li>The result of the check made when the song was added (ready to use, or needs a look), and the kind of reason when it needs a look</li>
-      <li>Whether you added a song that was shown as needing a look</li>
       <li>The result of the quick check made before adding the song, and the kind of reason for it</li>
       <li>Whether a half-beat correction was applied</li>
       <li>How the song was added (from the Music app or from the Files app)</li>
       <li>If you skipped between several songs, the period during which each song played (from how many seconds to how many seconds after you started walking)</li>
-      <li>How the timing offset changed while that song played (a representative value for each of ten equal parts of the time it played)</li>
-      <li>A one-word grouping of the song's character, decided from how evenly the beats are spaced and how far they reach across the song</li></ul>
+      <li>A one-word grouping of the song's character, decided from how evenly the beats are spaced and how far they reach across the song</li>
+      <li>From the step-by-step log: the beat times, the playback speed of the song, and the tempo-matching values (sent under the conditions in 14-2-5)</li></ul>
     <p>This is sent so that we can investigate why music does not match your steps for songs you add. The title, the artist name, the file name, and the contents of the file itself are never sent.</p>
 
     <h3>14-2-3 App settings</h3>
@@ -285,7 +285,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>From a walk in which no signal was sent (including every walk with version 1.7 or later), no raw motion sensor readings (acceleration and rotation values) are sent (the measurements described in Section 2 and the step-by-step log in 14-2-5 are sent; this excludes unsent records created by earlier versions, as described in 14-2)</li>
       <li>Notes on the summary screen (free text) are never sent</li>
       <li>Audio itself is never recorded or sent</li>
-      <li>As stated in Section 1, location data, contacts, photos, and similar data are never collected</li>
+      <li>As stated in Section 1, contacts, photos, and similar data are never collected. Location for the map route is not sent to Wizabee's servers (Section 18)</li>
       <li>When you add a song from the Music app, the song is used only on your iPhone and is never sent anywhere</li>
       <li>Your heart rate, values read from Health, your heart rate limit setting, and the records of your own songs and the distance record are never sent</li></ul>
 
@@ -363,6 +363,21 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
 
     <h3>17-5 New phones and deletion</h3>
     <p>Because the records of your own songs and the distance record exist only on your device, they move to a new iPhone only when you restore it from an encrypted backup (including iCloud Backup). They are not synced through iCloud Keychain. We do not hold these records, so we cannot restore them for you.</p></section>
+
+  <section id="section-18"><h2><span class="no">18</span>Map route (optional)</h2>
+    <p>This section applies wherever you live.</p>
+
+    <h3>18-1 Your choice</h3>
+    <p>Only if you choose "GPS with map" under "How your route is shown" in Settings does the App ask for location permission ("While Using the App") and draw your walk route on a map (called the "map route" in this section). It is not chosen at first; the App then shows only the slope path, which uses no location. The App never asks for "Always".</p>
+
+    <h3>18-2 When it records</h3>
+    <p>The App records your location every 5 seconds, only during a walk you start in the App (including from Shortcuts or Siri). If you turn off the screen and put your iPhone in your pocket, it keeps recording during that walk (a blue indicator appears at the top of the screen meanwhile). It does not record when you are not on a walk.</p>
+
+    <h3>18-3 What is not sent</h3>
+    <p>Your location is used only to draw the route on the walk screen and is not sent to Wizabee's servers, not even when collaborator mode is on. To show the map, the App loads map data for the area being shown from Apple. Apple handles this under its own privacy policy. Exported or shared records do not include the route.</p>
+
+    <h3>18-4 Where it is kept and how to delete it</h3>
+    <p>The route is saved only on this iPhone and is not included in iCloud Backup. If you delete the Wizabee app, the route is deleted too. The first and last 200 m of the route are hidden at first.</p></section>
 
   <p class="foot"><a href="../support/en/">Support</a>　／　<a href="../">日本語</a>　／　© 2026 Wizabee</p>
 </div>
