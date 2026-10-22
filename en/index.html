@@ -100,7 +100,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>(7) Step-by-step log — for each step during a walk, the footstrike time, the beat time, your walking tempo, and the playback speed. It is sent after the walk ends (14-2-5).</li>
       <li>(8) Tempo-matching values — how your walking tempo was read and how playback speed was adjusted (14-2-5).</li></ul>
     <p>The purpose, storage location, and retention period for sent information are described in Sections 3 and 4.</p>
-    <p>Even when collaborator mode is on, your heart rate, values read from Health, your location, the notes on the summary screen, and the distance record are never sent. For people who are not contributors, no records about their own songs are sent. Contributors send only the values in 14-2-2 (never the title, the file name or the audio itself).</p>
+    <p>Even when collaborator mode is on, your heart rate, values read from Health, your location, the notes on the summary screen, and the distance record are never sent to us. For people who are not contributors, no records about their own songs are sent. For contributors, records about their own songs are limited to the values in 14-2-2 (never the title, the file name or the audio itself).</p>
     <p>When such data is sent, the originating IP address is recorded in Supabase's access log. We use this log only to detect unauthorised access and to investigate faults.</p></section>
 
   <section><h2><span class="no">3</span>Purpose</h2>
@@ -228,7 +228,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>If you had collaborator mode on before December 1, 2026 (Japan time), the benefit above applies while you contribute, and after you stop, you keep all the included songs and can use up to six of your own songs (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
 
     <h3>14-2 What is sent in collaborator mode</h3>
-    <p>From version 1.7, the App has no way to send a signal, and no new information described in this section is created. However, if records created by version 1.6 or earlier have not yet been sent and remain on your device, they may be sent from version 1.7 or later, but only while Collaborator Mode is on and your consent is in place, and only within 7 days of their creation (up to 5 records). Records are sent only if Collaborator Mode is on and you have given consent, and only after the App confirms that you are using it in Japan. Records older than 7 days are deleted from the device without being sent. If you turn off Collaborator Mode, they are not sent.</p>
+    <p>From version 1.7, the App has no way to send a signal, and no new signal records described in this section (the items below) are created. However, if records created by version 1.6 or earlier have not yet been sent and remain on your device, they may be sent from version 1.7 or later, but only while Collaborator Mode is on and your consent is in place, and only within 7 days of their creation (up to 5 records). Records are sent only if Collaborator Mode is on and you have given consent, and only after the App confirms that you are using it in Japan. Records older than 7 days are deleted from the device without being sent. If you turn off Collaborator Mode, they are not sent.</p>
     <p>In version 1.6 or earlier, while collaborator mode is on, if the music feels wrong and you use your earphones to send a signal, the following information is sent to our server:</p>
     <ul>
       <li>Motion sensor readings (accelerometer and gyroscope) for a short period before and after the signal</li>
@@ -287,7 +287,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>Audio itself is never recorded or sent</li>
       <li>As stated in Section 1, contacts, photos, and similar data are never collected. Location for the map route is not sent to Wizabee's servers (Section 18)</li>
       <li>When you add a song from the Music app, the song is used only on your iPhone and is never sent anywhere</li>
-      <li>Your heart rate, values read from Health, your heart rate limit setting, and the records of your own songs and the distance record are never sent</li></ul>
+      <li>Your heart rate, values read from Health, your heart rate limit setting, and the records of your own songs (Section 17) and the distance record are never sent</li></ul>
 
     <h3>14-4 Turning off collaborator mode</h3>
     <p>You can stop at any time with Settings &gt; Contributor &gt; Stop contributing. After you stop, no further contributor data is sent (except the contributor ID sent once to request deletion, if you choose "Also delete the data I've sent"). The song-of-the-month check (Section 15) continues regardless of collaborator mode.</p>
@@ -368,10 +368,10 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>This section applies wherever you live.</p>
 
     <h3>18-1 Your choice</h3>
-    <p>Only if you choose "GPS with map" under "How your route is shown" in Settings does the App ask for location permission ("While Using the App") and draw your walk route on a map (called the "map route" in this section). It is not chosen at first; the App then shows only the slope path, which uses no location. The App never asks for "Always".</p>
+    <p>Only if you choose "GPS with map" under "How your route is shown" in Settings does the App ask for location permission ("While Using the App"). If you allow it, the App draws your walking route on a map (called the "map route" in this section). It is not chosen at first; the App then shows only the slope path, which uses no location. The App never asks for "Always".</p>
 
     <h3>18-2 When it records</h3>
-    <p>The App records your location every 5 seconds, only during a walk you start in the App (including from Shortcuts or Siri). If you turn off the screen and put your iPhone in your pocket, it keeps recording during that walk (a blue indicator appears at the top of the screen meanwhile). It does not record when you are not on a walk.</p>
+    <p>The App records your location every 5 seconds, only during regular walks you start in the App (excluding calibration and trial walks, and including walks started from Shortcuts or Siri). If you turn off the screen and put your iPhone in your pocket, it keeps recording during that walk (a blue indicator appears at the top of the screen meanwhile). It does not record when you are not on a walk.</p>
 
     <h3>18-3 What is not sent</h3>
     <p>Your location is used only to draw the route on the walk screen and is not sent to Wizabee's servers, not even when collaborator mode is on. To show the map, the App loads map data for the area being shown from Apple. Apple handles this under its own privacy policy. Exported or shared records do not include the route.</p>
