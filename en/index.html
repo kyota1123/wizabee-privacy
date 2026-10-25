@@ -115,7 +115,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>Information received in collaborator mode is stored in the following places.</p>
     <ul>
       <li>Supabase (our service provider for storage and processing): a service provided by Supabase Pte. Ltd., a company in Singapore. Its servers are in Japan (Tokyo region).</li>
-      <li>Cloudflare R2 (where the motion log in 14-2-7 is stored): a service provided by Cloudflare, Inc., a company in the United States. The data is stored in the Asia-Pacific region; the exact country can't be specified. [TO CONFIRM: whether 2.4 stores it in R2, the region and the retention period (S336, 0517 draft section 10)]</li>
+      <li>Cloudflare R2 (where the motion log in 14-2-7 is stored): a service provided by Cloudflare, Inc., a company in the United States. The data is stored in the Asia-Pacific region; the exact country can't be specified. [TO CONFIRM: whether 2.4 stores it in R2, the region and the retention period, and whether the rule below (deleted in principle one year after we receive it) also applies to the records in 14-2-7 (S336, 0517 draft section 10)]</li>
       <li>A computer managed by us in Japan:
         <ul>
           <li>Backup copies for recovery from failures: copies of the records we received, kept for up to 30 days.</li>
@@ -227,7 +227,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>Contributors receive a benefit. Its details are shown in the app and may change.</p>
     <p>While you contribute, you can import your own songs up to the number shown in the app (up to 10 minutes each). What happens to your songs if you stop contributing is shown in the app.</p>
     <p>Because version 2.2 sends more (such as the step-by-step log), we ask existing contributors to agree again. If you do not agree, collaborator mode is turned off and the new items are not sent.</p>
-    <p>Because version 2.4 sends more (the matching summary and Apple Watch buttons in 14-2-6, and parts of the motion log over Wi-Fi in 14-2-7), we ask existing contributors to agree again. If you do not agree, collaborator mode stays on and only the new items are not sent. [TO CONFIRM: whether contributors who do not agree to version 4 stay contributors and keep sending the version 3 items (0517 draft section 10, S356), or send nothing (requirements T8: those who do not agree send nothing)]</p>
+    <p>Because version 2.4 sends more (the matching summary and Apple Watch buttons in 14-2-6, and parts of the motion log over Wi-Fi in 14-2-7), we ask existing contributors to agree again. If you do not agree, collaborator mode stays on and only the new items are not sent. [TO CONFIRM: whether contributors who do not agree to version 4 stay contributors and keep sending the version 3 items (0517 draft section 10, S356), or send nothing (requirements T8: those who do not agree send nothing); if nothing, fix this sentence together with Section 1 and the start of Section 2]</p>
     <p>If you had collaborator mode on with version 2.1 or earlier: until November 30, 2026 (Japan time), while collaborator mode is on, you can use all five included songs and choose up to six songs you added yourself (you choose which ones). When you turn it off, those choices are released, and just once, right afterwards, you can choose again within the limit that then applies. No song file is ever removed from your device. This is not a purchase, and there is no charge.</p>
     <p>If you had collaborator mode on before December 1, 2026 (Japan time), the benefit above applies while you contribute, and after you stop, you keep all the included songs and can use up to six of your own songs (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
 
@@ -297,7 +297,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <ul>
       <li>iPhone motion-sensor readings (acceleration and rotation values) from the start of each walk and from 30 seconds around moments such as when the tempo drifted</li>
       <li>For your first walk as a contributor, and then one walk in every 20, the readings for the whole walk</li></ul>
-    <p>These readings are kept on your iPhone for up to 3 days after the walk and deleted from your iPhone once sent. Readings not sent within 3 days because there was no Wi-Fi are deleted without being sent. Apple Watch motion values are not sent. These records are used to improve tempo matching. [TO CONFIRM: whether the first walk, one in every 20 and 3 days match how 2.4 is built (S206, S356–S358)]</p>
+    <p>These readings are kept on your iPhone for up to 3 days after the walk and deleted from your iPhone once sent. Readings not sent within 3 days because there was no Wi-Fi are deleted without being sent. Apple Watch motion values are not sent. These records are used to improve tempo matching. [TO CONFIRM: whether the first walk, one in every 20 and 3 days, and whether "30 seconds around" means 30 seconds before and 30 seconds after or 30 seconds in total, match how 2.4 is built (S206, S356–S358)]</p>
 
     <h3>14-3 What is not sent</h3>
     <ul>
