@@ -228,7 +228,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
     <p>Contributors receive a benefit. Its details are shown in the app and may change.</p>
     <p>While you contribute, you can import your own songs up to the number shown in the app (up to 10 minutes each). What happens to your songs if you stop contributing is shown in the app.</p>
     <p>Because version 2.2 sends more (such as the step-by-step log), we ask existing contributors to agree again. If you do not agree, collaborator mode is turned off and the new items are not sent.</p>
-    <p>Because version 2.4 sends more (the matching summary and Apple Watch buttons in 14-2-6, and parts of the motion log over Wi-Fi in 14-2-7), we ask existing contributors to agree again. If you do not agree, no records are sent, and your contributor benefits stay the same. Unless you have agreed, version 2.4 or later of the App sends none of the records described in Sections 2 and 14.</p>
+    <p>Because version 2.4 sends more (the matching summary and Apple Watch buttons in 14-2-6, and parts of the motion log over Wi-Fi in 14-2-7), we ask existing contributors to agree again. If you do not agree, no records are sent (records waiting to be sent are deleted from your iPhone), and your contributor benefits stay the same. Unless you have agreed, version 2.4 or later of the App sends none of the records described in Sections 2 and 14.</p>
     <p>If you had collaborator mode on with version 2.1 or earlier: until November 30, 2026 (Japan time), while collaborator mode is on, you can use all five included songs and choose up to six songs you added yourself (you choose which ones). When you turn it off, those choices are released, and just once, right afterwards, you can choose again within the limit that then applies. No song file is ever removed from your device. This is not a purchase, and there is no charge.</p>
     <p>If you had collaborator mode on before December 1, 2026 (Japan time), the benefit above applies while you contribute, and after you stop, you keep all the included songs and can use up to six of your own songs (Section 17). This is not a purchase, and there is no charge. No song file is ever removed from your device.</p>
 
@@ -257,7 +257,8 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>How the song was added (from the Music app or from the Files app)</li>
       <li>If you skipped between several songs, the period during which each song played (from how many seconds to how many seconds after you started walking)</li>
       <li>A one-word grouping of the song's character, decided from how evenly the beats are spaced and how far they reach across the song</li>
-      <li>From the step-by-step log: the beat times, the playback speed of the song, and the tempo-matching values (sent under the conditions in 14-2-5)</li></ul>
+      <li>From the step-by-step log: the footstrike times and the beat times, the playback speed of the song, and the tempo-matching values (sent under the conditions in 14-2-5)</li>
+      <li>Audio-delay correction values</li></ul>
     <p>This is sent so that we can investigate why music does not match your steps for songs you add. The title, the artist name, the file name, and the contents of the file itself are never sent.</p>
 
     <h3>14-2-3 App settings</h3>
@@ -292,7 +293,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>A summary of how well your steps matched the beat: the seconds until the matching settled (when you started walking, and each time you set off again after stopping) and how many times this happened, and the number of 10-second windows and the share of them that were matched</li>
       <li>How you carry your iPhone, as selected in Settings, and the playback-speed range</li>
       <li>Presses of the "[TO CONFIRM: button name]" / "[TO CONFIRM: button name]" buttons on Apple Watch (how many seconds after recording started, and which button; up to 50 per walk), and the number of presses of each button</li></ul>
-    <p>We use the records above to improve tempo matching. The difference between the Apple Watch and iPhone clocks, audio-delay correction values, second-by-second matching values, and heart rate are not sent.</p>
+    <p>We use the records above to improve tempo matching. We do not send the time difference between the Apple Watch and the iPhone, or your heart rate.</p>
 
     <h3>14-2-7 Parts of the motion log over Wi-Fi (from version 2.4)</h3>
     <p>Only while collaborator mode is on and you have agreed to the version 2.4 terms, the following records are sent automatically while your iPhone is connected to Wi-Fi.</p>
