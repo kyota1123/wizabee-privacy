@@ -75,10 +75,10 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>Changes in height during each walk (relative height from the start of the walk, derived from air pressure, every few seconds)</li>
       <li>Floors climbed up and down (from your device's pedometer)</li>
       <li>Periods of walking, standing still, and running (from your device's motion activity)</li>
-      <li>Periods for each song (the song, start and end times, and your average walking tempo and the song's average speed during that period)</li>
       <li>Times when you switched the tempo mode or used the earphone button (triple press)</li>
       <li>Times when the heart rate limit took effect (when the rest started and ended, and the total rest time; the heart rate values themselves are not kept). This record is kept in a separate file from your walk records and is excluded from iCloud backup</li></ul>
     <p>The App reads these within the "Motion &amp; Fitness" permission you have already given and does not ask for any new permission. If you have not given the permission, or your device lacks the feature, they are not recorded. The App does not keep your average or maximum heart rate (Section 16).</p>
+    <p>Per-song segments (which song played from when to when, counted from the start of the walk) are kept on this iPhone. In collaborator mode, only the values listed in Section 14 are sent.</p>
     <p>The records on your device are removed when you delete the App, except for the following:</p>
     <ul>
       <li>Records included in your iPhone backups (such as iCloud Backup), if you use them. Backups are kept by Apple's systems, and we do not receive them.</li>
@@ -100,9 +100,10 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>(7) Step-by-step log — for each step during a walk, the footstrike time, the beat time, your walking tempo, and the playback speed. It is sent after the walk ends (14-2-5).</li>
       <li>(8) Tempo-matching values — how your walking tempo was read and how playback speed was adjusted (14-2-5).</li>
       <li>(9) Matching summary and Apple Watch buttons — a summary of how well your steps matched the beat, how you carried your iPhone, the playback-speed range, and presses of the "[TO CONFIRM: button name]" / "[TO CONFIRM: button name]" buttons on Apple Watch (14-2-6).</li>
-      <li>(10) Parts of the motion log over Wi-Fi — iPhone motion-sensor readings from moments such as the start of a walk (14-2-7).</li></ul>
+      <li>(10) Parts of the motion log over Wi-Fi — iPhone motion-sensor readings from moments such as the start of a walk (14-2-7).</li>
+      <li>(11) Audio delay correction values (the estimated output delay of your earphones or speaker, and any adjustment you made)</li></ul>
     <p>The purpose, storage location, and retention period for sent information are described in Sections 3 and 4.</p>
-    <p>Even when collaborator mode is on, your heart rate, values read from Health, your location, the notes on the summary screen, and the distance record are never sent to us. For people who are not contributors, no records about their own songs are sent. For contributors, records about their own songs are limited to the values in 14-2-2 (never the title, the file name or the audio itself).</p>
+    <p>Even when collaborator mode is on, your heart rate, values read from Health, your location, the notes on the summary screen, and the distance record are never sent to us. For people who are not contributors, no records about their own songs are sent. For contributors, records about their own songs are limited to the values in 14-2-2 (never the title, the file name or the audio itself). The measurements in this section for that walk (including (11)) are also sent only if you have agreed as described in 14-2-2.</p>
     <p>When such data is sent, the originating IP address is recorded in Supabase's access log. We use this log only to detect unauthorised access and to investigate faults. [TO CONFIRM: how the 14-2-7 records reach R2 (through the receiving Worker or not) and where the IP address is then recorded]</p></section>
 
   <section><h2><span class="no">3</span>Purpose</h2>
@@ -257,8 +258,7 @@ a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;w
       <li>How the song was added (from the Music app or from the Files app)</li>
       <li>If you skipped between several songs, the period during which each song played (from how many seconds to how many seconds after you started walking)</li>
       <li>A one-word grouping of the song's character, decided from how evenly the beats are spaced and how far they reach across the song</li>
-      <li>From the step-by-step log: the footstrike times and the beat times, the playback speed of the song, and the tempo-matching values (sent under the conditions in 14-2-5)</li>
-      <li>Audio-delay correction values</li></ul>
+      <li>From the step-by-step log: the footstrike times and the beat times, the playback speed of the song, and the tempo-matching values (sent under the conditions in 14-2-5)</li></ul>
     <p>This is sent so that we can investigate why music does not match your steps for songs you add. The title, the artist name, the file name, and the contents of the file itself are never sent.</p>
 
     <h3>14-2-3 App settings</h3>
